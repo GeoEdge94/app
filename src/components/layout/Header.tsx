@@ -3,9 +3,11 @@
 import { Moon, Sun, Wallet, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useMapStore } from "@/stores/useMapStore";
+import { useWalletStore } from "@/lib/wallet";
 
 export function Header() {
   const { darkMode, toggleDarkMode } = useMapStore();
+  const balance = useWalletStore((s) => s.balance);
 
   return (
     <header className="flex items-center justify-between h-12 px-4 border-b border-border bg-background/95 backdrop-blur-lg z-40 shrink-0">
@@ -29,6 +31,14 @@ export function Header() {
       </nav>
 
       <div className="flex items-center gap-2">
+        {/* Balance */}
+        <div className="flex items-center gap-1 px-2 py-1 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg">
+          <Wallet className="h-3 w-3 text-emerald-600" />
+          <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 tabular-nums">
+            {balance.toLocaleString()} EUR
+          </span>
+        </div>
+
         <Button
           variant="ghost"
           size="icon"
@@ -36,10 +46,6 @@ export function Header() {
           onClick={toggleDarkMode}
         >
           {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-        </Button>
-        <Button size="sm" className="h-8 text-xs gap-1.5 hidden sm:flex">
-          <Wallet className="h-3.5 w-3.5" />
-          Connect
         </Button>
       </div>
     </header>

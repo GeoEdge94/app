@@ -24,6 +24,7 @@ import { MarketsList } from "@/components/markets/MarketsList";
 import { MarketCard } from "@/components/markets/MarketCard";
 import { MARKETS } from "@/lib/markets-data";
 import { MOCK_BETS } from "@/lib/mock-data";
+import { WalletPanel } from "@/components/wallet/WalletPanel";
 
 const MapView = dynamic(
   () => import("@/components/map/MapView").then((m) => ({ default: m.MapView })),
@@ -88,7 +89,11 @@ export default function Home() {
     if (activeTab === "portfolio") {
       return (
         <ScrollArea className="flex-1">
-          <div className="px-3 py-3"><PortfolioView /></div>
+          <div className="px-3 py-3 space-y-4">
+            <WalletPanel />
+            <Separator />
+            <PortfolioView />
+          </div>
         </ScrollArea>
       );
     }
