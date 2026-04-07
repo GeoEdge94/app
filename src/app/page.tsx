@@ -121,12 +121,7 @@ export default function Home() {
               )}
             </div>
             <Separator className="my-1" />
-            {zonesLoading ? (
-              <div className="flex items-center justify-center py-12">
-                <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
-              </div>
-            ) : (
-              <div className="px-3 py-2 space-y-2">
+            <div className="px-3 py-2 space-y-2">
                 {/* Active bets banner */}
                 {MOCK_BETS.filter((b) => b.status === "active").length > 0 && (
                   <>
@@ -159,7 +154,6 @@ export default function Home() {
                   <MarketCard key={m.id} market={m} onSelect={() => {}} />
                 ))}
               </div>
-            )}
           </>
         )}
 
@@ -197,15 +191,9 @@ export default function Home() {
 
       <main className="flex flex-1 overflow-hidden relative">
         <div className="flex-1 relative">
-          {zonesLoading ? (
-            <div className="w-full h-full flex items-center justify-center bg-muted">
-              <Loader2 className="h-8 w-8 animate-spin text-primary" />
-            </div>
-          ) : (
-            <MapView key={darkMode ? "dark" : "light"} zones={zones} firesGeoJson={fires} cadastreGeoJson={cadastre} riversGeoJson={rivers} vigilanceGeoJson={vigilance} onZoneClick={handleZoneSelect} onDeselect={handleDeselect} />
-          )}
-          {!zonesLoading && <LayerControls />}
-          {!zonesLoading && <BetBanner />}
+          <MapView key={darkMode ? "dark" : "light"} zones={zones} firesGeoJson={fires} cadastreGeoJson={cadastre} riversGeoJson={rivers} vigilanceGeoJson={vigilance} onZoneClick={handleZoneSelect} onDeselect={handleDeselect} />
+          <LayerControls />
+          <BetBanner />
 
           {/* Stats bar */}
           <div className="absolute left-0 right-0 flex items-center justify-center gap-2.5 px-3 py-1.5 bg-background/80 backdrop-blur-md border-t border-border/50 z-10 bottom-14 md:bottom-0 md:right-[380px]">
