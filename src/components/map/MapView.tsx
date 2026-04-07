@@ -8,6 +8,7 @@ import { MAP_STYLES, TILE_SOURCES, FRANCE_CENTER, DEFAULT_ZOOM } from "@/lib/map
 import { RISK_COLORS } from "@/lib/risk-colors";
 import { marketsToGeoJson } from "@/lib/markets-geojson";
 import { marketZonesToGeoJson } from "@/lib/market-zones-geo";
+import { activeBetsToGeoJson } from "@/lib/mock-data";
 import type { BettingZone } from "@/types";
 
 interface MapViewProps {
@@ -376,6 +377,67 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
         if (zone) onZoneClick(zone);
       });
 
+      // ─── 10. ACTIVE BETS (user's positions) ───
+      const betsGeoJson = activeBetsToGeoJson();
+      map.addSource("active-bets", { type: "geojson", data: betsGeoJson });
+
+      map.addLayer({
+        id: "bets-pulse", type: "circle", source: "active-bets",
+        paint: {
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 10, 10, 22],
+          "circle-color": "#2563EB",
+          "circle-opacity": 0.15,
+          "circle-blur": 0.8,
+        },
+      });
+
+      map.addLayer({
+        id: "bets-point", type: "circle", source: "active-bets",
+        paint: {
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 5, 10, 10],
+          "circle-color": "#2563EB",
+          "circle-opacity": 0.9,
+          "circle-stroke-color": "#FFFFFF",
+          "circle-stroke-width": 2.5,
+        },
+      });
+
+      map.addLayer({
+        id: "bets-label", type: "symbol", source: "active-bets",
+        layout: {
+          "text-field": ["concat", ["get", "amount"], "€ x", ["get", "odds"]],
+          "text-size": 10,
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+          "text-offset": [0, -2],
+          "text-allow-overlap": true,
+        },
+        paint: { "text-color": "#1D4ED8", "text-halo-color": "#FFFFFF", "text-halo-width": 2 },
+        minzoom: 6,
+      });
+
+      // Bet click popup
+      map.on("click", "bets-point", (e) => {
+        if (!e.features?.[0]) return;
+        const p = e.features[0].properties;
+        const coords = (e.features[0].geometry as GeoJSON.Point).coordinates as [number, number];
+        const daysLeft = Math.max(0, Math.ceil((new Date(String(p?.expiresAt)).getTime() - Date.now()) / 86400000));
+        new maplibregl.Popup({ offset: 14, maxWidth: "240px" })
+          .setLngLat(coords)
+          .setHTML(
+            `<div style="font-size:12px;line-height:1.5">
+              <div style="font-size:10px;color:#2563EB;font-weight:700;margin-bottom:2px">MON PARI</div>
+              <strong>${p?.zoneName}</strong>
+              <div style="display:flex;gap:10px;margin-top:4px">
+                <div><span style="font-size:16px;font-weight:800">${p?.amount}€</span><br/><span style="font-size:10px;color:#6B7280">Mise</span></div>
+                <div><span style="font-size:16px;font-weight:800;color:#2563EB">x${p?.odds}</span><br/><span style="font-size:10px;color:#6B7280">Cote</span></div>
+                <div><span style="font-size:16px;font-weight:800;color:#10B981">${p?.potentialGain}€</span><br/><span style="font-size:10px;color:#6B7280">Gain</span></div>
+              </div>
+              <div style="font-size:10px;color:#6B7280;margin-top:3px">${p?.horizon} · ${daysLeft}j restants</div>
+            </div>`
+          )
+          .addTo(map);
+      });
+
       // Market click popup
       map.on("click", "markets-point", (e) => {
         if (!e.features?.[0]) return;
@@ -450,7 +512,7 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
       // Cursors
       const pointer = () => { map.getCanvas().style.cursor = "pointer"; };
       const reset = () => { map.getCanvas().style.cursor = ""; };
-      ["zones-fill", "fires-point", "cadastre-fill", "markets-point"].forEach((id) => {
+      ["zones-fill", "fires-point", "cadastre-fill", "markets-point", "bets-point"].forEach((id) => {
         if (map.getLayer(id)) {
           map.on("mouseenter", id, pointer);
           map.on("mouseleave", id, reset);

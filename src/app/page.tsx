@@ -21,6 +21,9 @@ import { useZones } from "@/hooks/useZones";
 import { useCadastreData } from "@/hooks/useCadastreData";
 import { useHydroData } from "@/hooks/useHydroData";
 import { MarketsList } from "@/components/markets/MarketsList";
+import { MarketCard } from "@/components/markets/MarketCard";
+import { MARKETS } from "@/lib/markets-data";
+import { MOCK_BETS } from "@/lib/mock-data";
 
 const MapView = dynamic(
   () => import("@/components/map/MapView").then((m) => ({ default: m.MapView })),
@@ -116,8 +119,36 @@ export default function Home() {
               </div>
             ) : (
               <div className="px-3 py-2 space-y-2">
+                {/* Active bets banner */}
+                {MOCK_BETS.filter((b) => b.status === "active").length > 0 && (
+                  <>
+                    <p className="text-[10px] font-semibold text-primary uppercase tracking-wider px-1">Mes paris actifs</p>
+                    <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+                      {MOCK_BETS.filter((b) => b.status === "active").slice(0, 4).map((bet) => (
+                        <div key={bet.betId} className="shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl bg-primary/5 border border-primary/10">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                          <div>
+                            <p className="text-[11px] font-semibold whitespace-nowrap">{bet.zoneName.length > 18 ? bet.zoneName.substring(0, 18) + "..." : bet.zoneName}</p>
+                            <p className="text-[9px] text-muted-foreground">{bet.amount}€ · x{bet.odds} · {bet.horizon}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <Separator className="my-1" />
+                  </>
+                )}
+
+                {/* Zone cards */}
+                <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider px-1">Zones feux</p>
                 {zones.map((zone) => (
                   <ZoneCard key={zone.zoneId} zone={zone} onSelect={handleZoneSelect} selected={selectedZone?.zoneId === zone.zoneId} />
+                ))}
+
+                {/* Top prediction markets */}
+                <Separator className="my-1" />
+                <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider px-1">Marches tendance</p>
+                {MARKETS.sort((a, b) => b.volume - a.volume).slice(0, 3).map((m) => (
+                  <MarketCard key={m.id} market={m} onSelect={() => {}} />
                 ))}
               </div>
             )}
