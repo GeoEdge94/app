@@ -2,12 +2,15 @@ export type MarketCategory = "flood" | "rain" | "storm" | "fire" | "catnat";
 export type MarketType = "binary" | "threshold" | "count" | "range" | "multi";
 export type MarketStatus = "open" | "closed" | "resolved_yes" | "resolved_no" | "pending";
 
+export type Platform = "polymarket" | "kalshi" | "metaculus" | "manifold" | "geoedge" | "augur" | "azuro";
+
 export interface PredictionMarket {
   id: string;
   title: string;
   category: MarketCategory;
   type: MarketType;
   status: MarketStatus;
+  platform: Platform;
   description: string;
   resolutionRule: string;
   sourcePrimary: string;
@@ -25,6 +28,16 @@ export interface PredictionMarket {
   coordinates?: { lat: number; lon: number };
   relatedZoneId?: string;
 }
+
+export const PLATFORM_META: Record<Platform, { name: string; color: string; bg: string }> = {
+  polymarket: { name: "Polymarket", color: "text-blue-600", bg: "bg-blue-50" },
+  kalshi: { name: "Kalshi", color: "text-indigo-600", bg: "bg-indigo-50" },
+  metaculus: { name: "Metaculus", color: "text-teal-600", bg: "bg-teal-50" },
+  manifold: { name: "Manifold", color: "text-purple-600", bg: "bg-purple-50" },
+  geoedge: { name: "GeoEdge", color: "text-primary", bg: "bg-primary/5" },
+  augur: { name: "Augur", color: "text-fuchsia-600", bg: "bg-fuchsia-50" },
+  azuro: { name: "Azuro", color: "text-cyan-600", bg: "bg-cyan-50" },
+};
 
 const CATEGORY_LABELS: Record<MarketCategory, string> = {
   flood: "Inondation / Crue",
@@ -52,6 +65,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "flood",
     type: "binary",
     status: "open",
+    platform: "polymarket",
     description: "Marche sur la presence d'au moins un departement en vigilance crues orange ou rouge en France metropolitaine.",
     resolutionRule: "Oui si la carte Vigicrues affiche au moins un territoire orange ou rouge a l'actualisation de 16h le 30/04/2026.",
     sourcePrimary: "Vigicrues — bulletin national",
@@ -71,6 +85,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "flood",
     type: "threshold",
     status: "open",
+    platform: "kalshi",
     description: "Marche sur le depassement du seuil de 3.20m a la station Paris-Austerlitz sur la Seine.",
     resolutionRule: "Oui si la station affiche une hauteur > 3.20m dans Hub'Eau ou Vigicrues avant le 15/05/2026 23:59.",
     sourcePrimary: "Hub'Eau hydrometrie + Vigicrues",
@@ -92,6 +107,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "flood",
     type: "count",
     status: "open",
+    platform: "geoedge",
     description: "Marche sur le nombre de communes en risque de crue forte ou tres forte.",
     resolutionRule: "On prend le pic du nombre de communes colorees entre 06h00 et 18h00 demain. Oui si > 20.",
     sourcePrimary: "APIC / Vigicrues Flash",
@@ -111,6 +127,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "flood",
     type: "threshold",
     status: "open",
+    platform: "polymarket",
     description: "Marche sur le debit du Rhone a la station de Beaucaire.",
     resolutionRule: "Oui si le debit instantane depasse 5000 m3/s dans Hub'Eau avant l'echeance.",
     sourcePrimary: "Hub'Eau hydrometrie",
@@ -132,6 +149,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "flood",
     type: "threshold",
     status: "open",
+    platform: "metaculus",
     description: "Marche sur la hauteur de la Garonne a la station de Tonneins.",
     resolutionRule: "Oui si la hauteur depasse 8.50m dans Hub'Eau avant le 30/06/2026 23:59.",
     sourcePrimary: "Hub'Eau hydrometrie",
@@ -154,6 +172,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "rain",
     type: "threshold",
     status: "open",
+    platform: "kalshi",
     description: "Marche sur un cumul de pluie exceptionnel a la station Meteo-France de Nice.",
     resolutionRule: "Oui si les observations Meteo-France atteignent 80mm sur une fenetre de 24h glissante.",
     sourcePrimary: "API Meteo-France observations",
@@ -175,6 +194,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "rain",
     type: "binary",
     status: "open",
+    platform: "geoedge",
     description: "Marche sur le passage de Montpellier en alerte precipitations tres intenses.",
     resolutionRule: "Oui si la commune est coloree au niveau 'tres intense' sur APIC dans la fenetre.",
     sourcePrimary: "APIC",
@@ -196,6 +216,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "rain",
     type: "count",
     status: "open",
+    platform: "polymarket",
     description: "Marche sur le nombre de departements en vigilance orange pour orages.",
     resolutionRule: "Oui si au moins 3 departements sont simultanément en orange Orages sur la carte vigilance avant dimanche 23:59.",
     sourcePrimary: "Vigilance Meteo-France",
@@ -215,6 +236,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "rain",
     type: "threshold",
     status: "open",
+    platform: "manifold",
     description: "Marche sur un cumul pluviometrique significatif dans le Gard.",
     resolutionRule: "Oui si une station Meteo-France du Gard enregistre > 50mm en 24h avant dimanche 23:59.",
     sourcePrimary: "API Meteo-France",
@@ -235,6 +257,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "rain",
     type: "binary",
     status: "open",
+    platform: "polymarket",
     description: "Marche sur la survenue d'un episode cevenol majeur declenchant une vigilance rouge.",
     resolutionRule: "Oui si au moins 1 departement de l'arc cevenol (30, 34, 48, 07, 26) passe en rouge Pluie-Inondation.",
     sourcePrimary: "Vigilance Meteo-France",
@@ -256,6 +279,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "storm",
     type: "count",
     status: "open",
+    platform: "kalshi",
     description: "Marche sur le nombre de departements en alerte vent a une echeance precise.",
     resolutionRule: "Compte des departements affiches sur la carte vigilance Vent violent a 06h.",
     sourcePrimary: "Vigilance Meteo-France",
@@ -275,6 +299,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "storm",
     type: "binary",
     status: "open",
+    platform: "geoedge",
     description: "Marche sur le passage du Var en vigilance elevee pour Pluie-Inondation.",
     resolutionRule: "Oui si la carte Vigilance Meteo-France affiche le Var en orange ou rouge Pluie-Inondation avant l'echeance.",
     sourcePrimary: "Vigilance Meteo-France",
@@ -296,6 +321,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "storm",
     type: "threshold",
     status: "open",
+    platform: "augur",
     description: "Marche sur une rafale de vent extreme en Corse.",
     resolutionRule: "Oui si une station Meteo-France de Corse (2A/2B) enregistre une rafale > 150 km/h.",
     sourcePrimary: "API Meteo-France observations",
@@ -316,6 +342,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "storm",
     type: "binary",
     status: "open",
+    platform: "polymarket",
     description: "Marche sur le passage d'une tempete officiellement nommee sur la France.",
     resolutionRule: "Oui si Meteo-France emet une vigilance rouge Vent violent pour une tempete nommee.",
     sourcePrimary: "Vigilance Meteo-France",
@@ -338,6 +365,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "fire",
     type: "count",
     status: "open",
+    platform: "geoedge",
     description: "Marche sur le nombre de departements en danger tres eleve pour les feux.",
     resolutionRule: "Compte exact des departements en rouge sur la carte Meteo des forets du 15/07/2026.",
     sourcePrimary: "Meteo des forets",
@@ -357,6 +385,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "fire",
     type: "binary",
     status: "open",
+    platform: "geoedge",
     description: "Marche sur la detection d'un feu actif par satellite dans le departement 13.",
     resolutionRule: "Oui si la couche Active Fires MODIS/VIIRS Last 7 days montre au moins 1 detection dans le 13.",
     sourcePrimary: "EFFIS / Copernicus",
@@ -379,6 +408,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "fire",
     type: "binary",
     status: "open",
+    platform: "manifold",
     description: "Marche sur la detection d'une zone brulee significative dans l'Aude.",
     resolutionRule: "Oui si la couche Burnt Areas MODIS VIIRS Last 30 days affiche une zone > 100ha dans le 11.",
     sourcePrimary: "EFFIS burnt areas",
@@ -401,6 +431,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "catnat",
     type: "count",
     status: "open",
+    platform: "metaculus",
     description: "Marche sur la publication d'un arrete de catastrophe naturelle pour inondations touchant plus de 50 communes.",
     resolutionRule: "Oui si un arrete publie au JO avant l'echeance concerne au moins 50 communes pour inondations/coulees de boue.",
     sourcePrimary: "Legifrance",
@@ -421,6 +452,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "catnat",
     type: "binary",
     status: "open",
+    platform: "kalshi",
     description: "Marche sur la reconnaissance officielle de la secheresse dans le Gard.",
     resolutionRule: "Oui si le JO publie un arrete Cat Nat secheresse/retrait-gonflement des argiles incluant le Gard.",
     sourcePrimary: "Legifrance",
@@ -442,6 +474,7 @@ export const MARKETS: PredictionMarket[] = [
     category: "catnat",
     type: "count",
     status: "open",
+    platform: "azuro",
     description: "Marche sur le nombre total de communes reconnues en Cat Nat au premier semestre 2026.",
     resolutionRule: "Oui si le cumul des communes dans les arretes Cat Nat publies entre le 01/01 et le 30/06/2026 depasse 200.",
     sourcePrimary: "Legifrance + Georisques",

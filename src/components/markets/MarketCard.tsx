@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Droplets, CloudRain, Wind, Flame, FileText, Clock, Users, TrendingUp, MapPin } from "lucide-react";
 import { MarketMiniChart } from "./MarketMiniChart";
 import type { PredictionMarket, MarketCategory } from "@/lib/markets-data";
+import { PLATFORM_META } from "@/lib/markets-data";
 
 const catIcons: Record<MarketCategory, typeof Flame> = {
   flood: Droplets, rain: CloudRain, storm: Wind, fire: Flame, catnat: FileText,
@@ -35,7 +36,10 @@ export function MarketCard({ market, onSelect }: { market: PredictionMarket; onS
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-[13px] font-semibold leading-tight line-clamp-2">{market.title}</p>
-            <div className="flex items-center gap-2 mt-1">
+            <div className="flex items-center gap-1.5 mt-1">
+              <span className={`text-[9px] font-semibold px-1.5 py-0 h-4 inline-flex items-center rounded-full ${PLATFORM_META[market.platform].bg} ${PLATFORM_META[market.platform].color}`}>
+                {PLATFORM_META[market.platform].name}
+              </span>
               <Badge variant="outline" className="text-[9px] px-1.5 py-0 h-4 font-medium">{typeLabels[market.type]}</Badge>
               {market.department && <span className="text-[10px] text-muted-foreground">Dept. {market.department}</span>}
             </div>

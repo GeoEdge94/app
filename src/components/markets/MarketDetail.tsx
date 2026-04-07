@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { MarketOddsChart } from "./MarketOddsChart";
 import type { PredictionMarket, MarketCategory } from "@/lib/markets-data";
+import { PLATFORM_META } from "@/lib/markets-data";
 
 const catIcons: Record<MarketCategory, typeof Flame> = {
   flood: Droplets, rain: CloudRain, storm: Wind, fire: Flame, catnat: FileText,
@@ -43,6 +44,9 @@ export function MarketDetail({ market, onBack }: { market: PredictionMarket; onB
           <div className="flex items-center gap-2 mb-1">
             <Icon className="h-4 w-4 text-muted-foreground" />
             <span className="text-[11px] text-muted-foreground font-medium">{catLabels[market.category]}</span>
+            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${PLATFORM_META[market.platform].bg} ${PLATFORM_META[market.platform].color}`}>
+              {PLATFORM_META[market.platform].name}
+            </span>
           </div>
           <h3 className="text-sm font-bold leading-tight">{market.title}</h3>
         </div>
