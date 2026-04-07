@@ -1,0 +1,55 @@
+[2026-04-07 22:20:46] ============================================================
+[2026-04-07 22:20:46] STARTING PREDICTION MARKET SCRAPER
+[2026-04-07 22:20:46] ============================================================
+[2026-04-07 22:20:46] 
+[2026-04-07 22:20:46] --- MANIFOLD MARKETS ---
+[2026-04-07 22:20:46] MANIFOLD: Loaded 50 markets for term='climate' from cached file
+[2026-04-07 22:20:46] MANIFOLD: Loaded 50 markets for term='earthquake' from cached file
+[2026-04-07 22:20:46] MANIFOLD: Loaded 50 markets for term='hurricane' from cached file
+[2026-04-07 22:20:46] MANIFOLD: Loaded 50 markets for term='wildfire' from cached file
+[2026-04-07 22:20:47] MANIFOLD: Loaded 50 markets for term='flood' from cached file
+[2026-04-07 22:20:47] MANIFOLD: Loaded 50 markets for term='weather' from cached file
+[2026-04-07 22:20:47] MANIFOLD: Loaded 50 markets for term='fire' from cached file
+[2026-04-07 22:20:47] MANIFOLD: Loaded 50 markets for term='tornado' from cached file
+[2026-04-07 22:20:47] MANIFOLD: Total raw results across all terms: 400
+[2026-04-07 22:20:47] MANIFOLD: Duplicates removed: 5
+[2026-04-07 22:20:47] MANIFOLD: Total unique markets after deduplication: 395
+[2026-04-07 22:20:47] 
+[2026-04-07 22:20:47] --- METACULUS ---
+[2026-04-07 22:20:47] METACULUS API: Trying https://www.metaculus.com/api2/questions/?search=climate&limit=50&status=open
+[2026-04-07 22:20:47] METACULUS API: term='climate' HTTP 403 - Forbidden
+[2026-04-07 22:20:47] METACULUS API: Trying https://www.metaculus.com/api/questions/?search=climate&limit=50&status=open
+[2026-04-07 22:20:47] METACULUS API: term='climate' HTTP 403 - Forbidden
+[2026-04-07 22:20:47] METACULUS API: Trying https://www.metaculus.com/api2/questions/?search=earthquake&limit=50&status=open
+[2026-04-07 22:20:48] METACULUS API: term='earthquake' HTTP 403 - Forbidden
+[2026-04-07 22:20:48] METACULUS API: Trying https://www.metaculus.com/api/questions/?search=earthquake&limit=50&status=open
+[2026-04-07 22:20:48] METACULUS API: term='earthquake' HTTP 403 - Forbidden
+[2026-04-07 22:20:48] METACULUS API: Trying https://www.metaculus.com/api2/questions/?search=hurricane&limit=50&status=open
+[2026-04-07 22:20:48] METACULUS API: term='hurricane' HTTP 403 - Forbidden
+[2026-04-07 22:20:48] METACULUS API: Trying https://www.metaculus.com/api/questions/?search=hurricane&limit=50&status=open
+[2026-04-07 22:20:48] METACULUS API: term='hurricane' HTTP 403 - Forbidden
+[2026-04-07 22:20:48] METACULUS API: Trying https://www.metaculus.com/api2/questions/?search=wildfire&limit=50&status=open
+[2026-04-07 22:20:48] METACULUS API: term='wildfire' HTTP 403 - Forbidden
+[2026-04-07 22:20:48] METACULUS API: Trying https://www.metaculus.com/api/questions/?search=wildfire&limit=50&status=open
+[2026-04-07 22:20:49] METACULUS API: term='wildfire' HTTP 403 - Forbidden
+[2026-04-07 22:20:49] METACULUS API: Trying https://www.metaculus.com/api2/questions/?search=flood&limit=50&status=open
+[2026-04-07 22:20:49] METACULUS API: term='flood' HTTP 429 - Too Many Requests
+[2026-04-07 22:20:49] METACULUS API: Trying https://www.metaculus.com/api/questions/?search=flood&limit=50&status=open
+[2026-04-07 22:20:49] METACULUS API: term='flood' HTTP 429 - Too Many Requests
+[2026-04-07 22:20:49] METACULUS API: Trying https://www.metaculus.com/api2/questions/?search=temperature&limit=50&status=open
+[2026-04-07 22:20:49] METACULUS API: term='temperature' HTTP 429 - Too Many Requests
+[2026-04-07 22:20:49] METACULUS API: Trying https://www.metaculus.com/api/questions/?search=temperature&limit=50&status=open
+[2026-04-07 22:20:49] METACULUS API: term='temperature' HTTP 429 - Too Many Requests
+[2026-04-07 22:20:49] METACULUS API: Trying https://www.metaculus.com/api2/questions/?search=drought&limit=50&status=open
+[2026-04-07 22:20:49] METACULUS API: term='drought' HTTP 429 - Too Many Requests
+[2026-04-07 22:20:49] METACULUS API: Trying https://www.metaculus.com/api/questions/?search=drought&limit=50&status=open
+[2026-04-07 22:20:49] METACULUS API: term='drought' HTTP 429 - Too Many Requests
+[2026-04-07 22:20:49] METACULUS API: Trying https://www.metaculus.com/api2/questions/?search=weather&limit=50&status=open
+[2026-04-07 22:20:49] METACULUS API: term='weather' HTTP 429 - Too Many Requests
+[2026-04-07 22:20:49] METACULUS API: Trying https://www.metaculus.com/api/questions/?search=weather&limit=50&status=open
+[2026-04-07 22:20:49] METACULUS API: term='weather' HTTP 429 - Too Many Requests
+[2026-04-07 22:20:49] METACULUS: Total raw results across all terms: 0
+[2026-04-07 22:20:49] METACULUS: Duplicates removed: 0
+[2026-04-07 22:20:49] METACULUS: Total unique questions after deduplication: 0
+[2026-04-07 22:20:49] Saved Manifold results to C:\Users\matth\GeoEdge\app\public\data\scraped_manifold.json
+[2026-04-07 22:20:49] Saved Metaculus results to C:\Users\matth\GeoEdge\app\public\data\scraped_metaculus.json

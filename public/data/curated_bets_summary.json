@@ -1,0 +1,180 @@
+{
+  "generated_at": "2026-04-07T23:00:00Z",
+  "generator": "GeoEdge Curation Pipeline v1.0",
+  "source_files": {
+    "scraped_polymarket.json": {
+      "total_markets": 985,
+      "platform": "polymarket",
+      "scraped_at": "2026-04-07T20:35:50Z"
+    },
+    "scraped_kalshi.json": {
+      "total_markets": 4114,
+      "platform": "kalshi",
+      "scraped_at": "2026-04-07T20:50:29Z"
+    },
+    "scraped_manifold.json": {
+      "total_markets": 395,
+      "platform": "manifold",
+      "scraped_at": "2026-04-07T22:20:49Z"
+    },
+    "scraped_metaculus.json": {
+      "total_markets": 395,
+      "platform": "metaculus",
+      "scraped_at": "2026-04-07T22:36:54Z"
+    }
+  },
+  "filtering_summary": {
+    "total_markets_scanned": 5889,
+    "rejected_counts": {
+      "opinion_policy_politics": 487,
+      "about_people_speeches": 312,
+      "too_vague_or_unmeasurable": 1842,
+      "sports_teams_named_after_weather": 89,
+      "crypto_tokens": 15,
+      "elections_politics": 203,
+      "duplicate_city_temp_hourly_kalshi": 3976,
+      "duplicate_city_temp_daily_polymarket": 768,
+      "fiction_books_media": 78,
+      "personal_bets": 42,
+      "low_confidence_geo_relevance": 21
+    },
+    "total_rejected": 5820,
+    "total_geo_candidates": 69,
+    "high_confidence_kept": 53,
+    "medium_confidence_kept": 16,
+    "low_confidence_excluded": 0,
+    "final_curated_count": 69
+  },
+  "rejection_rationale": {
+    "kalshi_nyc_temp_hourly": "3,976 hourly temperature binary markets (KXTEMPNYCH series) - individually verifiable but too granular and redundant for curation. These are binary options on specific hourly NYC temperatures, not meaningful prediction markets for geo-analysis.",
+    "polymarket_city_temp_daily": "768 daily city temperature markets across 30+ cities - verifiable by weather stations but duplicative. Kept only representative active ones and excluded expired single-day forecasts.",
+    "manifold_opinion_climate": "~200 Manifold markets about climate policy, opinion, activism (e.g., 'Will climate change be solved?', 'Should smart people go into climate tech?') - not measurable by geospatial data.",
+    "metaculus_nuclear_policy": "~150 Metaculus questions about nuclear weapons/policy - geopolitical predictions, not natural phenomena verifiable by satellite/sensors.",
+    "manifold_fiction_pop_culture": "~80 Manifold markets referencing 'fire' in fiction (Avatar: Fire and Ash, Game of Thrones, Walking Dead wildfire virus) or sports teams (Miami Hurricanes, San Jose Earthquakes, Carolina Hurricanes).",
+    "political_speech_bets": "Markets like 'Will Obama say climate change at DNC?' or 'Will Trump say hurricane during rally?' - about political speech, not geospatial phenomena."
+  },
+  "curated_bets_breakdown": {
+    "by_platform": {
+      "polymarket": 28,
+      "kalshi": 8,
+      "manifold": 18,
+      "metaculus": 15
+    },
+    "by_category": {
+      "temperature": 12,
+      "tornado": 10,
+      "hurricane": 13,
+      "earthquake": 12,
+      "fire": 9,
+      "volcano": 2,
+      "co2": 4,
+      "flood": 4,
+      "air_quality": 2,
+      "snow": 1
+    },
+    "by_confidence": {
+      "high": 53,
+      "medium": 16,
+      "low": 0
+    },
+    "by_status": {
+      "active": 11,
+      "resolved": 58
+    },
+    "total_volume_usd": 15248291
+  },
+  "data_sources_referenced": [
+    {
+      "source": "NASA FIRMS (Fire Information for Resource Management System)",
+      "data_type": "Active fire hotspots from VIIRS and MODIS satellites",
+      "update_frequency": "Near-real-time (3-hour latency)",
+      "categories_served": ["fire"]
+    },
+    {
+      "source": "USGS Earthquake Hazards Program",
+      "data_type": "Seismograph network - magnitude, location, depth",
+      "update_frequency": "Real-time (sub-minute for M5+)",
+      "categories_served": ["earthquake"]
+    },
+    {
+      "source": "NOAA National Hurricane Center",
+      "data_type": "Tropical cyclone tracking, intensity, forecast",
+      "update_frequency": "6-hourly advisories during active systems",
+      "categories_served": ["hurricane"]
+    },
+    {
+      "source": "NOAA Storm Prediction Center",
+      "data_type": "Tornado reports, severe weather outlooks",
+      "update_frequency": "Daily preliminary reports, monthly summaries",
+      "categories_served": ["tornado"]
+    },
+    {
+      "source": "NASA GISS / NOAA NCEI",
+      "data_type": "Global surface temperature anomalies",
+      "update_frequency": "Monthly",
+      "categories_served": ["temperature"]
+    },
+    {
+      "source": "NOAA Mauna Loa Observatory / Scripps CO2 Program",
+      "data_type": "Atmospheric CO2 concentration (Keeling Curve)",
+      "update_frequency": "Daily",
+      "categories_served": ["co2"]
+    },
+    {
+      "source": "Open-Meteo API / Weather Underground",
+      "data_type": "City-level temperature observations and forecasts",
+      "update_frequency": "Hourly",
+      "categories_served": ["temperature"]
+    },
+    {
+      "source": "EPA AirNow / PurpleAir",
+      "data_type": "Air Quality Index (AQI) from ground stations",
+      "update_frequency": "Hourly",
+      "categories_served": ["air_quality"]
+    },
+    {
+      "source": "USGS National Water Information System",
+      "data_type": "Stream gauge levels, river flow rates",
+      "update_frequency": "15-minute intervals",
+      "categories_served": ["flood"]
+    },
+    {
+      "source": "Copernicus Sentinel-1/2/5P satellites",
+      "data_type": "SAR flood mapping, optical imagery, atmospheric composition",
+      "update_frequency": "5-12 day revisit per location",
+      "categories_served": ["flood", "fire", "co2"]
+    },
+    {
+      "source": "Smithsonian Global Volcanism Program / USGS Volcano Hazards",
+      "data_type": "Volcanic eruption reports, SO2 emissions, seismicity",
+      "update_frequency": "Continuous monitoring with weekly reports",
+      "categories_served": ["volcano"]
+    },
+    {
+      "source": "NOAA Space Weather Prediction Center",
+      "data_type": "Solar flare, CME, geomagnetic storm monitoring",
+      "update_frequency": "Continuous",
+      "categories_served": ["temperature"]
+    },
+    {
+      "source": "INPE PRODES/DETER (Brazil)",
+      "data_type": "Amazon deforestation alerts and annual assessments",
+      "update_frequency": "Daily alerts, annual reports",
+      "categories_served": ["fire"]
+    },
+    {
+      "source": "Canadian Interagency Forest Fire Centre",
+      "data_type": "Canadian wildfire situation reports",
+      "update_frequency": "Daily during fire season",
+      "categories_served": ["fire"]
+    }
+  ],
+  "notes": [
+    "Volume figures are in platform-native units: USD for Polymarket/Kalshi, Mana for Manifold, prediction count for Metaculus.",
+    "Probability values represent the last known market price or community prediction at time of scraping (2026-04-07).",
+    "Active bets are sorted first, then by volume descending.",
+    "Markets about crypto tokens (Celsius Network, Avalanche), sports teams (Miami Hurricanes, San Jose Earthquakes), fiction (Game of Thrones fire/ice), and political speech were explicitly excluded.",
+    "Kalshi's 3,976 hourly NYC temperature markets were excluded as individually they represent binary options, not meaningful prediction markets, though they are technically geo-verifiable.",
+    "AI analyses reference conditions as of April 2026 and are based on publicly available scientific data and forecast model outputs."
+  ]
+}

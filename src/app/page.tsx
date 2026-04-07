@@ -28,6 +28,7 @@ import { MarketCard } from "@/components/markets/MarketCard";
 import { RealBetCard } from "@/components/betting/RealBetCard";
 import { MARKETS } from "@/lib/markets-data";
 import { REAL_BETS } from "@/lib/real-bets";
+import { CURATED_BETS } from "@/lib/curated-bets";
 import { MOCK_BETS } from "@/lib/mock-data";
 import { WalletPanel } from "@/components/wallet/WalletPanel";
 
@@ -116,24 +117,62 @@ export default function Home() {
     }
 
     if (activeTab === "simulator") {
+      const activeCurated = CURATED_BETS.filter((b) => b.active);
+      const resolvedCurated = CURATED_BETS.filter((b) => !b.active);
       return (
         <ScrollArea className="flex-1">
           <div className="px-3 py-3 space-y-3">
-            {/* Real bets from official sources */}
+            {/* Curated bets header */}
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-sm font-semibold">Paris reels — Sources officielles</h2>
-                <p className="text-[11px] text-muted-foreground">{REAL_BETS.length} paris avec oracle verifie</p>
+                <h2 className="text-sm font-semibold">Marches verifies — Donnees geospatiales</h2>
+                <p className="text-[11px] text-muted-foreground">
+                  {CURATED_BETS.length} marches curtes depuis 4 plateformes — {activeCurated.length} actifs
+                </p>
               </div>
-              <span className="text-[9px] text-orange-600 bg-orange-50 dark:bg-orange-950/30 px-1.5 py-0.5 rounded-full font-medium">ORACLE</span>
+              <div className="flex items-center gap-1">
+                <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" /><span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" /></span>
+                <span className="text-[9px] text-emerald-600 font-medium">LIVE</span>
+              </div>
             </div>
+
+            {/* Active curated bets */}
+            {activeCurated.length > 0 && (
+              <>
+                <p className="text-[10px] font-semibold text-primary uppercase tracking-wider px-1">Actifs — Oracle verifie</p>
+                <div className="space-y-2">
+                  {activeCurated.map((bet) => (
+                    <RealBetCard key={bet.id} bet={{
+                      id: bet.id, title: bet.title, category: bet.category as "fire" | "flood" | "rain" | "storm" | "earthquake",
+                      probability: bet.probability, yesPrice: bet.probability, noPrice: 1 - bet.probability,
+                      volume: bet.volume, participants: Math.round(bet.volume / 50),
+                      deadline: bet.deadline, oracleSource: bet.resolution_source, oracleCheck: bet.ai_analysis,
+                      coordinates: bet.coordinates ?? { lat: 0, lon: 0 }, proof: bet.data_layer,
+                      createdAt: new Date().toISOString(),
+                    }} />
+                  ))}
+                </div>
+                <Separator />
+              </>
+            )}
+
+            {/* Resolved curated bets (top 10) */}
+            <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider px-1">Resolus — {resolvedCurated.length} marches</p>
             <div className="space-y-2">
-              {REAL_BETS.slice(0, 8).map((bet) => (
-                <RealBetCard key={bet.id} bet={bet} />
+              {resolvedCurated.slice(0, 10).map((bet) => (
+                <RealBetCard key={bet.id} bet={{
+                  id: bet.id, title: bet.title, category: bet.category as "fire" | "flood" | "rain" | "storm" | "earthquake",
+                  probability: bet.probability, yesPrice: bet.probability, noPrice: 1 - bet.probability,
+                  volume: bet.volume, participants: Math.round(bet.volume / 50),
+                  deadline: bet.deadline, oracleSource: bet.resolution_source, oracleCheck: bet.ai_analysis,
+                  coordinates: bet.coordinates ?? { lat: 0, lon: 0 }, proof: bet.data_layer,
+                  createdAt: new Date().toISOString(),
+                }} />
               ))}
             </div>
+
             <Separator />
-            {/* Prediction markets (Polymarket style) */}
+            {/* Full markets list */}
             <MarketsList />
           </div>
         </ScrollArea>
