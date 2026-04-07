@@ -49,8 +49,8 @@ export function BetBanner() {
   const items = [...trending, ...trending];
 
   return (
-    <div className="absolute top-3 left-14 right-0 md:left-0 md:right-[380px] z-10 pointer-events-none">
-      <div className="mr-3 ml-1 md:mx-3">
+    <div className="absolute top-3 left-0 right-0 md:right-[380px] z-10 pointer-events-none">
+      <div className="mx-3">
         <div
           ref={scrollRef}
           className="flex gap-1.5 overflow-x-hidden pointer-events-auto"
