@@ -1,0 +1,2013 @@
+{
+  "type": "FeatureCollection",
+  "name": "vigicrues_stations",
+  "metadata": {
+    "source": "Vigicrues (vigicrues.gouv.fr) + Hub'Eau (hubeau.eaufrance.fr)",
+    "description": "French flood vigilance monitoring stations with latest observation timestamps",
+    "total_vigicrues_stations": 2376,
+    "stations_with_coordinates": 100,
+    "fetched_at": "2026-04-07T13:43:33.643714+00:00"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.24247922,
+          43.60501836
+        ]
+      },
+      "properties": {
+        "code_station": "O422251003",
+        "station_name": "Castres [HE]",
+        "river_name": "Agout",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643468+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.336198092,
+          46.047408267
+        ]
+      },
+      "properties": {
+        "code_station": "V271201001",
+        "station_name": "Pont-d'Ain",
+        "river_name": "Ain",
+        "entite_vigicrues": 18,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643472+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.559419089,
+          45.206810537
+        ]
+      },
+      "properties": {
+        "code_station": "W103000101",
+        "station_name": "Orelle [DREAL]",
+        "river_name": "Arc",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643478+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.605501545,
+          42.863739312
+        ]
+      },
+      "properties": {
+        "code_station": "O123251001",
+        "station_name": "Bompas",
+        "river_name": "AriÃ¨ge",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643482+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.380671387,
+          47.4134855
+        ]
+      },
+      "properties": {
+        "code_station": "H240201001",
+        "station_name": "Brianny",
+        "river_name": "ArmanÃ§on",
+        "entite_vigicrues": 7,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643484+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.765529958,
+          48.549339386
+        ]
+      },
+      "properties": {
+        "code_station": "B204201001",
+        "station_name": "Vannes-le-ChÃ¢tel",
+        "river_name": "Aroffe",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643486+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.254377062,
+          45.212219388
+        ]
+      },
+      "properties": {
+        "code_station": "W105502002",
+        "station_name": "St-Jean-d'Arves [L'Endroit]",
+        "river_name": "Arvan",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643488+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.579664648,
+          46.056415908
+        ]
+      },
+      "properties": {
+        "code_station": "V005651101",
+        "station_name": "Cluses [Pont-Vieux]",
+        "river_name": "Arve",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643490+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.196388989,
+          43.950238238
+        ]
+      },
+      "properties": {
+        "code_station": "O678431001",
+        "station_name": "MontrÃ©al",
+        "river_name": "Auzoue",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643494+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.616703654,
+          44.072980581
+        ]
+      },
+      "properties": {
+        "code_station": "O576251001",
+        "station_name": "Montricoux",
+        "river_name": "Aveyron",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643495+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.621573558,
+          44.36251311
+        ]
+      },
+      "properties": {
+        "code_station": "O509252002",
+        "station_name": "Onet-le-ChÃ¢teau",
+        "river_name": "Aveyron",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643496+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.895957753,
+          44.158042484
+        ]
+      },
+      "properties": {
+        "code_station": "O560252001",
+        "station_name": "Varen",
+        "river_name": "Aveyron",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643498+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.041225494,
+          44.350165814
+        ]
+      },
+      "properties": {
+        "code_station": "O519254001",
+        "station_name": "Villefranche-de-Rouergue [HE]",
+        "river_name": "Aveyron",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643500+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.769828561,
+          45.191519092
+        ]
+      },
+      "properties": {
+        "code_station": "V353000101",
+        "station_name": "Ardoix",
+        "river_name": "Ay",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643501+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.298152911,
+          44.181686382
+        ]
+      },
+      "properties": {
+        "code_station": "O691292001",
+        "station_name": "Lavardac",
+        "river_name": "BaÃ¯se",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643504+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.412098674,
+          43.515732762
+        ]
+      },
+      "properties": {
+        "code_station": "O654294001",
+        "station_name": "Mirande",
+        "river_name": "BaÃ¯se",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643505+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.799657672,
+          43.55728321
+        ]
+      },
+      "properties": {
+        "code_station": "O273501001",
+        "station_name": "Tirent-PontÃ©jac",
+        "river_name": "Bras de la Gimone",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643511+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.110970958,
+          48.50573482
+        ]
+      },
+      "properties": {
+        "code_station": "A542201101",
+        "station_name": "Houdreville",
+        "river_name": "Brenon",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643513+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.22305177,
+          42.434395686
+        ]
+      },
+      "properties": {
+        "code_station": "Y702000101",
+        "station_name": "Gavignano",
+        "river_name": "Casaluna",
+        "entite_vigicrues": 26,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643516+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.422030898,
+          42.632397662
+        ]
+      },
+      "properties": {
+        "code_station": "Y044501001",
+        "station_name": "Catllar",
+        "river_name": "Castellane",
+        "entite_vigicrues": 21,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643518+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.034167054,
+          44.607031806
+        ]
+      },
+      "properties": {
+        "code_station": "O811352001",
+        "station_name": "Figeac",
+        "river_name": "CÃ©lÃ©",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643520+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.430450654,
+          44.264405558
+        ]
+      },
+      "properties": {
+        "code_station": "V546401501",
+        "station_name": "Montclus",
+        "river_name": "CÃ¨ze",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643522+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.048593718,
+          44.319240963
+        ]
+      },
+      "properties": {
+        "code_station": "V540402501",
+        "station_name": "SÃ©nÃ©chas",
+        "river_name": "CÃ¨ze",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643523+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.199915246,
+          44.262632339
+        ]
+      },
+      "properties": {
+        "code_station": "V543000202",
+        "station_name": "St-Ambroix",
+        "river_name": "CÃ¨ze",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643525+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.312743043,
+          49.516132934
+        ]
+      },
+      "properties": {
+        "code_station": "B460101001",
+        "station_name": "Chauvency",
+        "river_name": "Chiers",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643528+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.657260509,
+          49.475285856
+        ]
+      },
+      "properties": {
+        "code_station": "B403101001",
+        "station_name": "Montigny",
+        "river_name": "Chiers",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643529+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.396465587,
+          43.877366499
+        ]
+      },
+      "properties": {
+        "code_station": "X345401001",
+        "station_name": "Apt",
+        "river_name": "Coulon",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643533+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.02506698,
+          43.92616811
+        ]
+      },
+      "properties": {
+        "code_station": "Y343501501",
+        "station_name": "La RouviÃ¨re",
+        "river_name": "Crieulon",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643535+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.482518169,
+          44.849564091
+        ]
+      },
+      "properties": {
+        "code_station": "P514001001",
+        "station_name": "Bergerac",
+        "river_name": "Dordogne",
+        "entite_vigicrues": 32,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643539+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.248825173,
+          44.912917261
+        ]
+      },
+      "properties": {
+        "code_station": "P577001001",
+        "station_name": "Libourne",
+        "river_name": "Dordogne",
+        "entite_vigicrues": 32,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643540+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.526232618,
+          45.33936812
+        ]
+      },
+      "properties": {
+        "code_station": "W024401101",
+        "station_name": "St-Martin-de-Belleville [DREAL]",
+        "river_name": "Doron de Belleville",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643542+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.525447468,
+          45.483329994
+        ]
+      },
+      "properties": {
+        "code_station": "W024401001",
+        "station_name": "MoÃ»tiers [Ponserand] [DREAL]",
+        "river_name": "Doron de Bozel",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643543+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.577808105,
+          44.987841566
+        ]
+      },
+      "properties": {
+        "code_station": "V371402001",
+        "station_name": "Lamastre",
+        "river_name": "Doux",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643546+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.697006877,
+          45.119740188
+        ]
+      },
+      "properties": {
+        "code_station": "W283201001",
+        "station_name": "Pont-de-Claix",
+        "river_name": "Drac",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643547+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.381285809,
+          46.330403257
+        ]
+      },
+      "properties": {
+        "code_station": "V035501001",
+        "station_name": "Sciez",
+        "river_name": "Foron",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643555+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.960844727,
+          44.073424354
+        ]
+      },
+      "properties": {
+        "code_station": "V713501001",
+        "station_name": "CorbÃ¨s",
+        "river_name": "Gardon de Saint-Jean",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643558+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.739129952,
+          45.579376464
+        ]
+      },
+      "properties": {
+        "code_station": "V312401001",
+        "station_name": "Givors",
+        "river_name": "Gier",
+        "entite_vigicrues": 18,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643562+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.992065003,
+          43.879468398
+        ]
+      },
+      "properties": {
+        "code_station": "O286331001",
+        "station_name": "Beaumont-de-Lomagne",
+        "river_name": "Gimone",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643564+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.870142648,
+          43.62964297
+        ]
+      },
+      "properties": {
+        "code_station": "O274331001",
+        "station_name": "Gimont",
+        "river_name": "Gimone",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643565+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.194130312,
+          42.400550643
+        ]
+      },
+      "properties": {
+        "code_station": "Y702000201",
+        "station_name": "Omessa [Francardo2]",
+        "river_name": "Golo",
+        "entite_vigicrues": 26,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643567+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.570569584,
+          44.926676779
+        ]
+      },
+      "properties": {
+        "code_station": "W280402001",
+        "station_name": "Gresse-en-Vercors",
+        "river_name": "Gresse",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643569+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.652006448,
+          45.572277519
+        ]
+      },
+      "properties": {
+        "code_station": "V153402002",
+        "station_name": "Belmont-Tramonet [DREAL]",
+        "river_name": "Guiers",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643571+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.599180401,
+          43.749188877
+        ]
+      },
+      "properties": {
+        "code_station": "Y214002001",
+        "station_name": "Gignac canal",
+        "river_name": "HÃ©rault",
+        "entite_vigicrues": 21,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643573+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.610943746,
+          43.451194508
+        ]
+      },
+      "properties": {
+        "code_station": "O217251001",
+        "station_name": "BaziÃ¨ge",
+        "river_name": "Hers",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643574+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.826520214,
+          50.084369331
+        ]
+      },
+      "properties": {
+        "code_station": "B732201001",
+        "station_name": "Landrichamps",
+        "river_name": "Houille",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643576+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.055663585,
+          45.496269504
+        ]
+      },
+      "properties": {
+        "code_station": "W111001002",
+        "station_name": "MontmÃ©lian [DÃ©bitmÃ¨tre]",
+        "river_name": "IsÃ¨re",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643580+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.795138627,
+          45.618374356
+        ]
+      },
+      "properties": {
+        "code_station": "W002000102",
+        "station_name": "SÃ©ez [Malgovert] [DREAL]",
+        "river_name": "IsÃ¨re",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643581+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.126061563,
+          45.021919912
+        ]
+      },
+      "properties": {
+        "code_station": "P726151001",
+        "station_name": "Abzac",
+        "river_name": "Isle",
+        "entite_vigicrues": 32,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643582+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.369674648,
+          45.038297971
+        ]
+      },
+      "properties": {
+        "code_station": "P712151001",
+        "station_name": "Mussidan",
+        "river_name": "Isle",
+        "entite_vigicrues": 32,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643584+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.23331829,
+          44.986888098
+        ]
+      },
+      "properties": {
+        "code_station": "P817000101",
+        "station_name": "Savignac-de-l'Isle",
+        "river_name": "Isle",
+        "entite_vigicrues": 32,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643585+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.873209747,
+          45.627945054
+        ]
+      },
+      "properties": {
+        "code_station": "V131502001",
+        "station_name": "Motte-Servolex",
+        "river_name": "Leysse",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643590+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.070259401,
+          44.573543595
+        ]
+      },
+      "properties": {
+        "code_station": "O795151001",
+        "station_name": "Capdenac",
+        "river_name": "Lot",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643599+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.494911479,
+          44.520891943
+        ]
+      },
+      "properties": {
+        "code_station": "O702153003",
+        "station_name": "Mende [HE]",
+        "river_name": "Lot",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643600+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.227220153,
+          47.055503394
+        ]
+      },
+      "properties": {
+        "code_station": "U260403001",
+        "station_name": "Vuillafans",
+        "river_name": "Loue",
+        "entite_vigicrues": 18,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643603+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.438011543,
+          45.217900456
+        ]
+      },
+      "properties": {
+        "code_station": "P327401001",
+        "station_name": "St-Viance [Pont-de-Burg]",
+        "river_name": "Loyre",
+        "entite_vigicrues": 32,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643604+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.149771693,
+          48.213998759
+        ]
+      },
+      "properties": {
+        "code_station": "A523011001",
+        "station_name": "BegnÃ©court [Moulin-d'Heucheloup]",
+        "river_name": "Madon",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643606+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.320774188,
+          46.165726497
+        ]
+      },
+      "properties": {
+        "code_station": "V023502001",
+        "station_name": "Bonne",
+        "river_name": "Menoge",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643610+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.740048847,
+          48.447732868
+        ]
+      },
+      "properties": {
+        "code_station": "A631101003",
+        "station_name": "Baccarat [amont]",
+        "river_name": "Meurthe",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643612+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.002528782,
+          48.184729703
+        ]
+      },
+      "properties": {
+        "code_station": "A600101001",
+        "station_name": "Fraize",
+        "river_name": "Meurthe",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643613+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.481032756,
+          48.582850801
+        ]
+      },
+      "properties": {
+        "code_station": "A634101001",
+        "station_name": "LunÃ©ville [Aval]",
+        "river_name": "Meurthe",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643614+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.678670353,
+          48.601857218
+        ]
+      },
+      "properties": {
+        "code_station": "B134001001",
+        "station_name": "Chalaines",
+        "river_name": "Meuse",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643616+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.730564947,
+          49.880313503
+        ]
+      },
+      "properties": {
+        "code_station": "B700001002",
+        "station_name": "MonthermÃ© [LimnimÃ¨tre]",
+        "river_name": "Meuse",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643617+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.178850491,
+          49.494346826
+        ]
+      },
+      "properties": {
+        "code_station": "B315002001",
+        "station_name": "Stenay",
+        "river_name": "Meuse",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643618+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.686053148,
+          48.295896649
+        ]
+      },
+      "properties": {
+        "code_station": "A662121201",
+        "station_name": "Autrey - gare [Gare]",
+        "river_name": "Mortagne",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643620+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.054230085,
+          49.031105749
+        ]
+      },
+      "properties": {
+        "code_station": "A740000102",
+        "station_name": "Corny-sur-Moselle [limnimÃ¨tre]",
+        "river_name": "Moselle",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643622+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.796285291,
+          47.866921289
+        ]
+      },
+      "properties": {
+        "code_station": "A402061001",
+        "station_name": "Fresse-sur-Moselle",
+        "river_name": "Moselle",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643627+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.167185612,
+          49.122321571
+        ]
+      },
+      "properties": {
+        "code_station": "A743061001",
+        "station_name": "Metz [Pont des Morts]",
+        "river_name": "Moselle",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643628+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.710074637,
+          48.317446134
+        ]
+      },
+      "properties": {
+        "code_station": "B109201001",
+        "station_name": "Circourt-sur-Mouzon [Villars]",
+        "river_name": "Mouzon",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643631+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.751787233,
+          48.185384011
+        ]
+      },
+      "properties": {
+        "code_station": "A433301001",
+        "station_name": "Laveline-devant-BruyÃ¨res",
+        "river_name": "Neune",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643632+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.61424975,
+          49.046535877
+        ]
+      },
+      "properties": {
+        "code_station": "A983201001",
+        "station_name": "Faulquemont",
+        "river_name": "Nied Allemande",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643634+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.881716087,
+          49.167701088
+        ]
+      },
+      "properties": {
+        "code_station": "A820101001",
+        "station_name": "Jarny-Labry",
+        "river_name": "Orne",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643638+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.33878112,
+          43.604973827
+        ]
+      },
+      "properties": {
+        "code_station": "O682461001",
+        "station_name": "Montesquiou",
+        "river_name": "Osse",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643640+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.304807851,
+          43.758742135
+        ]
+      },
+      "properties": {
+        "code_station": "O686461001",
+        "station_name": "Vic-Fezensac",
+        "river_name": "Osse",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643642+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.440394695,
+          49.494172723
+        ]
+      },
+      "properties": {
+        "code_station": "B435201001",
+        "station_name": "Othe",
+        "river_name": "Othain",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643643+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.015413508,
+          44.242970248
+        ]
+      },
+      "properties": {
+        "code_station": "V605101001",
+        "station_name": "Roaix",
+        "river_name": "OuvÃ¨ze",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643646+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.838420825,
+          45.76828495
+        ]
+      },
+      "properties": {
+        "code_station": "V300002001",
+        "station_name": "Lyon [Pont Morand]",
+        "river_name": "RhÃ´ne",
+        "entite_vigicrues": 18,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643651+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.649140397,
+          43.804581416
+        ]
+      },
+      "properties": {
+        "code_station": "V720001003",
+        "station_name": "Tarascon [Pont de Beaucaire]",
+        "river_name": "RhÃ´ne",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643652+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.030500321,
+          45.823932233
+        ]
+      },
+      "properties": {
+        "code_station": "V125781001",
+        "station_name": "Alby-sur-ChÃ©ran",
+        "river_name": "Ruisseau des Eparis",
+        "entite_vigicrues": 19,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643657+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.961532525,
+          49.012193042
+        ]
+      },
+      "properties": {
+        "code_station": "A735201001",
+        "station_name": "Onville",
+        "river_name": "Rupt de Mad",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643658+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.834336332,
+          45.844517459
+        ]
+      },
+      "properties": {
+        "code_station": "U471001003",
+        "station_name": "Couzon-au-Mont-d'Or",
+        "river_name": "SaÃ´ne",
+        "entite_vigicrues": 18,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643661+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.288653049,
+          43.770315603
+        ]
+      },
+      "properties": {
+        "code_station": "O256292001",
+        "station_name": "Grenade",
+        "river_name": "Save",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643664+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.188174925,
+          49.100485691
+        ]
+      },
+      "properties": {
+        "code_station": "A788101002",
+        "station_name": "Metz [Pont Lothaire amont]",
+        "river_name": "Seille",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643666+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.227562537,
+          48.888160213
+        ]
+      },
+      "properties": {
+        "code_station": "A782101001",
+        "station_name": "Nomeny [crues]",
+        "river_name": "Seille",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643668+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.886754124,
+          43.956183121
+        ]
+      },
+      "properties": {
+        "code_station": "O358461004",
+        "station_name": "St-Affrique [Viaduc]",
+        "river_name": "Sorgues",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643675+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.620507116,
+          44.345912277
+        ]
+      },
+      "properties": {
+        "code_station": "O303101001",
+        "station_name": "CocurÃ¨s",
+        "river_name": "Tarn",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643678+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.150099271,
+          42.30298347
+        ]
+      },
+      "properties": {
+        "code_station": "Y900000201",
+        "station_name": "Corte [Ponte Vecchiu]",
+        "river_name": "Tavignano",
+        "entite_vigicrues": 26,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643680+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.486850937,
+          42.64474106
+        ]
+      },
+      "properties": {
+        "code_station": "Y044401001",
+        "station_name": "Marquixanes",
+        "river_name": "TÃªt",
+        "entite_vigicrues": 21,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643682+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.371994311,
+          43.516209203
+        ]
+      },
+      "properties": {
+        "code_station": "O438401001",
+        "station_name": "Aussillon [Pont de Rigautou]",
+        "river_name": "ThorÃ©",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643683+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.547156854,
+          43.473539268
+        ]
+      },
+      "properties": {
+        "code_station": "O431401001",
+        "station_name": "Sauveterre",
+        "river_name": "ThorÃ©",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643685+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.850824328,
+          42.940861823
+        ]
+      },
+      "properties": {
+        "code_station": "O149431003",
+        "station_name": "Lavelanet",
+        "river_name": "Touyre",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643688+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.028155677,
+          45.220436577
+        ]
+      },
+      "properties": {
+        "code_station": "P839431001",
+        "station_name": "MÃ©dillac",
+        "river_name": "Tude",
+        "entite_vigicrues": 32,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643691+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.812986788,
+          43.727784815
+        ]
+      },
+      "properties": {
+        "code_station": "X281121001",
+        "station_name": "Vinon-sur-Verdon [Le Hameau] [Pont]",
+        "river_name": "Verdon",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643695+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.565772294,
+          45.427857241
+        ]
+      },
+      "properties": {
+        "code_station": "P313102001",
+        "station_name": "Uzerche",
+        "river_name": "VÃ©zÃ¨re",
+        "entite_vigicrues": 32,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643698+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.46379338,
+          45.284875346
+        ]
+      },
+      "properties": {
+        "code_station": "P320101001",
+        "station_name": "Voutezac [Le Saillant]",
+        "river_name": "VÃ©zÃ¨re",
+        "entite_vigicrues": 32,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643699+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.845033347,
+          48.588299085
+        ]
+      },
+      "properties": {
+        "code_station": "A643112002",
+        "station_name": "BlÃ¢mont [amont]",
+        "river_name": "Vezouze",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643700+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.50034425,
+          42.768104546
+        ]
+      },
+      "properties": {
+        "code_station": "O114462001",
+        "station_name": "Vicdessos",
+        "river_name": "Vicdessos",
+        "entite_vigicrues": 25,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643702+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.928565802,
+          43.951404499
+        ]
+      },
+      "properties": {
+        "code_station": "Y340402001",
+        "station_name": "Conqueyrac",
+        "river_name": "Vidourle",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643703+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.377693211,
+          43.800466055
+        ]
+      },
+      "properties": {
+        "code_station": "Y351400501",
+        "station_name": "Caissargues",
+        "river_name": "Vieux Vistre",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643705+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.42273789,
+          43.833274557
+        ]
+      },
+      "properties": {
+        "code_station": "Y350000201",
+        "station_name": "Pont de Car",
+        "river_name": "Vieux Vistre",
+        "entite_vigicrues": 20,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643706+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.603384721,
+          48.13289237
+        ]
+      },
+      "properties": {
+        "code_station": "A436203001",
+        "station_name": "ChenimÃ©nil",
+        "river_name": "Vologne",
+        "entite_vigicrues": 2,
+        "last_observation": "2026-04-07T13:30:00+00:00",
+        "status": "active",
+        "source": "vigicrues.gouv.fr",
+        "fetched_at": "2026-04-07T13:43:33.643710+00:00"
+      }
+    }
+  ]
+}

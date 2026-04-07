@@ -1,1 +1,742 @@
-{"type":"FeatureCollection","metadata":{"source":"Meteo-France Vigilance (mock current)","count":15,"generated":"2026-04-07T13:40:22.726Z"},"features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[6.21,43.46]},"properties":{"department_code":"83","department_name":"Var","level":"orange","phenomena":"Pluie-Inondation"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.07,43.53]},"properties":{"department_code":"13","department_name":"Bouches-du-Rhone","level":"jaune","phenomena":"Orages"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[7.12,43.94]},"properties":{"department_code":"06","department_name":"Alpes-Maritimes","level":"jaune","phenomena":"Pluie-Inondation"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[4.17,43.96]},"properties":{"department_code":"30","department_name":"Gard","level":"orange","phenomena":"Orages"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[3.42,43.59]},"properties":{"department_code":"34","department_name":"Herault","level":"jaune","phenomena":"Orages"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.14,44.05]},"properties":{"department_code":"84","department_name":"Vaucluse","level":"vert","phenomena":"RAS"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-0.68,44.84]},"properties":{"department_code":"33","department_name":"Gironde","level":"jaune","phenomena":"Vent violent"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[8.98,41.87]},"properties":{"department_code":"2A","department_name":"Corse-du-Sud","level":"vert","phenomena":"RAS"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[2.41,43.1]},"properties":{"department_code":"11","department_name":"Aude","level":"orange","phenomena":"Pluie-Inondation"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[2.53,42.6]},"properties":{"department_code":"66","department_name":"Pyrenees-Orientales","level":"jaune","phenomena":"Orages"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[3.5,44.52]},"properties":{"department_code":"48","department_name":"Lozere","level":"vert","phenomena":"RAS"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[4.6,44.72]},"properties":{"department_code":"07","department_name":"Ardeche","level":"jaune","phenomena":"Orages"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.17,44.73]},"properties":{"department_code":"26","department_name":"Drome","level":"vert","phenomena":"RAS"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-0.77,43.89]},"properties":{"department_code":"40","department_name":"Landes","level":"vert","phenomena":"RAS"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-0.77,43.25]},"properties":{"department_code":"64","department_name":"Pyrenees-Atlantiques","level":"vert","phenomena":"RAS"}}]}
+{
+  "type": "FeatureCollection",
+  "name": "vigilance_departments",
+  "metadata": {
+    "source": "Meteo-France Vigilance (simulated - real API requires authentication token)",
+    "description": "French departmental weather vigilance levels. Simulated data based on spring season typical patterns for Mediterranean and Atlantic departments.",
+    "note": "To get real data, register at https://portail-api.meteofrance.fr/ for a DPVigilance API key",
+    "departments_count": 31,
+    "levels": {
+      "vert": "no particular danger",
+      "jaune": "be attentive",
+      "orange": "be very vigilant",
+      "rouge": "absolute vigilance"
+    },
+    "generated_at": "2026-04-07T13:43:33.647748+00:00"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.21,
+          43.46
+        ]
+      },
+      "properties": {
+        "department_code": "83",
+        "department_name": "Var",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "pluie-inondation",
+          "orage"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647753+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.07,
+          43.53
+        ]
+      },
+      "properties": {
+        "department_code": "13",
+        "department_name": "Bouches-du-Rhone",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "vent"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647760+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.12,
+          43.94
+        ]
+      },
+      "properties": {
+        "department_code": "06",
+        "department_name": "Alpes-Maritimes",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "pluie-inondation"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647763+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.17,
+          43.96
+        ]
+      },
+      "properties": {
+        "department_code": "30",
+        "department_name": "Gard",
+        "vigilance_level": "orange",
+        "vigilance_color": "orange",
+        "phenomena": [
+          "pluie-inondation",
+          "crue"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647766+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.42,
+          43.59
+        ]
+      },
+      "properties": {
+        "department_code": "34",
+        "department_name": "Herault",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "orage",
+          "pluie-inondation"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647768+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.14,
+          44.05
+        ]
+      },
+      "properties": {
+        "department_code": "84",
+        "department_name": "Vaucluse",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "crue"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647769+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.68,
+          44.84
+        ]
+      },
+      "properties": {
+        "department_code": "33",
+        "department_name": "Gironde",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "pluie-inondation"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647793+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.98,
+          41.87
+        ]
+      },
+      "properties": {
+        "department_code": "2A",
+        "department_name": "Corse-du-Sud",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647795+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.41,
+          43.1
+        ]
+      },
+      "properties": {
+        "department_code": "11",
+        "department_name": "Aude",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "pluie-inondation"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647803+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.53,
+          42.6
+        ]
+      },
+      "properties": {
+        "department_code": "66",
+        "department_name": "Pyrenees-Orientales",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647807+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.35,
+          48.86
+        ]
+      },
+      "properties": {
+        "department_code": "75",
+        "department_name": "Paris",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "vent"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647811+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.83,
+          45.76
+        ]
+      },
+      "properties": {
+        "department_code": "69",
+        "department_name": "Rhone",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "vent"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647815+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.44,
+          43.6
+        ]
+      },
+      "properties": {
+        "department_code": "31",
+        "department_name": "Haute-Garonne",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647818+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.06,
+          50.63
+        ]
+      },
+      "properties": {
+        "department_code": "59",
+        "department_name": "Nord",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647820+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.75,
+          48.58
+        ]
+      },
+      "properties": {
+        "department_code": "67",
+        "department_name": "Bas-Rhin",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647822+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.55,
+          47.22
+        ]
+      },
+      "properties": {
+        "department_code": "44",
+        "department_name": "Loire-Atlantique",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647825+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.68,
+          48.11
+        ]
+      },
+      "properties": {
+        "department_code": "35",
+        "department_name": "Ille-et-Vilaine",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647827+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1,
+          49.44
+        ]
+      },
+      "properties": {
+        "department_code": "76",
+        "department_name": "Seine-Maritime",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "vent"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647828+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.49,
+          48.39
+        ]
+      },
+      "properties": {
+        "department_code": "29",
+        "department_name": "Finistere",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "vent",
+          "vagues-submersion"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647830+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.77,
+          43.3
+        ]
+      },
+      "properties": {
+        "department_code": "64",
+        "department_name": "Pyrenees-Atlantiques",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "vent",
+          "pluie-inondation"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647832+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.73,
+          45.19
+        ]
+      },
+      "properties": {
+        "department_code": "38",
+        "department_name": "Isere",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647834+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.46,
+          45.49
+        ]
+      },
+      "properties": {
+        "department_code": "73",
+        "department_name": "Savoie",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647837+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.44,
+          46.07
+        ]
+      },
+      "properties": {
+        "department_code": "74",
+        "department_name": "Haute-Savoie",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "vent"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647840+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.57,
+          46.21
+        ]
+      },
+      "properties": {
+        "department_code": "01",
+        "department_name": "Ain",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647842+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.17,
+          44.73
+        ]
+      },
+      "properties": {
+        "department_code": "26",
+        "department_name": "Drome",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647844+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.42,
+          44.74
+        ]
+      },
+      "properties": {
+        "department_code": "07",
+        "department_name": "Ardeche",
+        "vigilance_level": "orange",
+        "vigilance_color": "orange",
+        "phenomena": [
+          "pluie-inondation",
+          "crue"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647846+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.5,
+          44.52
+        ]
+      },
+      "properties": {
+        "department_code": "48",
+        "department_name": "Lozere",
+        "vigilance_level": "jaune",
+        "vigilance_color": "jaune",
+        "phenomena": [
+          "pluie-inondation"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647848+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.57,
+          44.35
+        ]
+      },
+      "properties": {
+        "department_code": "12",
+        "department_name": "Aveyron",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647850+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.15,
+          43.79
+        ]
+      },
+      "properties": {
+        "department_code": "81",
+        "department_name": "Tarn",
+        "vigilance_level": "orange",
+        "vigilance_color": "orange",
+        "phenomena": [
+          "orage",
+          "crue"
+        ],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647854+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.49,
+          42.93
+        ]
+      },
+      "properties": {
+        "department_code": "09",
+        "department_name": "Ariege",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647856+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.14,
+          42.39
+        ]
+      },
+      "properties": {
+        "department_code": "2B",
+        "department_name": "Haute-Corse",
+        "vigilance_level": "vert",
+        "vigilance_color": "vert",
+        "phenomena": [],
+        "valid_from": "2026-04-07T13:43:33.647748+00:00",
+        "valid_until": "2026-04-08T13:43:33.647858+00:00",
+        "source": "meteofrance.fr (simulated - API requires authentication)",
+        "is_simulated": true,
+        "fetched_at": "2026-04-07T13:43:33.647748+00:00"
+      }
+    }
+  ]
+}

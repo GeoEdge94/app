@@ -1,1 +1,2215 @@
-{"type":"FeatureCollection","metadata":{"source":"Hub Eau hydrometrie","count":100,"generated":"2026-04-07T13:40:22.714Z"},"features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[6.796285291,47.866921289]},"properties":{"station_code":"A402061001","station_name":"La Moselle à Fresse-sur-Moselle","river_name":"La Moselle","height_m":"0.04","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.685918446,47.909444585]},"properties":{"station_code":"A405062001","station_name":"La Moselle à Rupt-sur-Moselle","river_name":"La Moselle","height_m":"0.56","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.715932814,47.993393232]},"properties":{"station_code":"A414020201","station_name":"La Moselotte à Vagney [Zainvillers]","river_name":"La Moselotte","height_m":"0.54","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.690262579,48.053182554]},"properties":{"station_code":"A417301001","station_name":"La Cleurie à Cleurie","river_name":"Ruisseau de la Cleurie","height_m":"0.41","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.611130574,48.0670775]},"properties":{"station_code":"A420063001","station_name":"La Moselle à Saint-Nabord - Noirgueux","river_name":"La Moselle","height_m":"0.89","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.597121367,48.019771926]},"properties":{"station_code":"A420063002","station_name":"La Moselle à Remiremont","river_name":"La Moselle","height_m":"1.28","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.751787233,48.185384011]},"properties":{"station_code":"A433301001","station_name":"Le Neune à Laveline-devant-Bruyères","river_name":"Ruisseau le Neune","height_m":"0.21","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.603384721,48.13289237]},"properties":{"station_code":"A436203001","station_name":"La Vologne à Cheniménil","river_name":"La Vologne","height_m":"0.33","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.45298063,48.165666233]},"properties":{"station_code":"A443064001","station_name":"La Moselle à Épinal","river_name":"La Moselle","height_m":"0.11","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.391243047,48.312435289]},"properties":{"station_code":"A455000201","station_name":"La Moselle à Châtel-sur-Moselle","river_name":"La Moselle","height_m":"1.62","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.367099557,48.292520452]},"properties":{"station_code":"A463201001","station_name":"L'Avière à Frizon","river_name":"L'Aviere","height_m":"1.03","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.260215116,48.536106708]},"properties":{"station_code":"A511061001","station_name":"La Moselle à Tonnoy","river_name":"La Moselle","height_m":"1.92","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.263786438,48.532281282]},"properties":{"station_code":"A511061002","station_name":"La Moselle à Velle-sur-Moselle","river_name":"La Moselle","height_m":"1.28","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.149771693,48.213998759]},"properties":{"station_code":"A523011001","station_name":"Le Madon à Begnécourt [Moulin d'Heucheloup]","river_name":"Le Madon","height_m":"0.35","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.174694523,48.259607832]},"properties":{"station_code":"A524201001","station_name":"La Gitte à Velotte-et-Tatignécourt","river_name":"Ruisseau la Gitte","height_m":"0.26","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.136364634,48.303258474]},"properties":{"station_code":"A526102001","station_name":"Le Madon à Mirecourt - Crues","river_name":"Le Madon","height_m":"-0.04","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.110970958,48.50573482]},"properties":{"station_code":"A542201101","station_name":"Le Brenon à Houdreville","river_name":"Le Brenon","height_m":"0.30","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.131545756,48.545355659]},"properties":{"station_code":"A543101001","station_name":"Le Madon à Pulligny","river_name":"Le Madon","height_m":"0.54","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.896401748,48.66976408]},"properties":{"station_code":"A573061001","station_name":"La Moselle à Toul","river_name":"La Moselle","height_m":"0.52","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[7.002528782,48.184729703]},"properties":{"station_code":"A600101001","station_name":"La Meurthe à Fraize","river_name":"La Meurthe","height_m":"0.52","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.845062409,48.402032182]},"properties":{"station_code":"A615103001","station_name":"La Meurthe à Raon-l'Étape","river_name":"La Meurthe","height_m":"0.79","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.877878865,48.416320357]},"properties":{"station_code":"A623201001","station_name":"La Plaine à Raon-l'Étape [La Trouche]","river_name":"La Plaine","height_m":"0.43","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.738612663,48.44923718]},"properties":{"station_code":"A631101001","station_name":"La Meurthe à Baccarat - aval","river_name":"La Meurthe","height_m":"0.77","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.740048847,48.447732868]},"properties":{"station_code":"A631101003","station_name":"La Meurthe à Baccarat - amont","river_name":"La Meurthe","height_m":"0.61","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.481032756,48.582850801]},"properties":{"station_code":"A634101001","station_name":"La Meurthe à Lunéville - Aval","river_name":"La Meurthe","height_m":"0.32","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.843907647,48.588128336]},"properties":{"station_code":"A643112001","station_name":"La Vezouze à Blâmont - aval","river_name":"La Vezouze","height_m":"0.29","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.845033347,48.588299085]},"properties":{"station_code":"A643112002","station_name":"La Vezouze à Blâmont - amont","river_name":"La Vezouze","height_m":"0.35","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.800409068,48.518136023]},"properties":{"station_code":"A648000101","station_name":"La Blette à Montigny","river_name":"La Blette","height_m":"0.38","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.624852639,48.580949425]},"properties":{"station_code":"A654111001","station_name":"La Vezouze à Thiébauménil","river_name":"La Vezouze","height_m":"0.34","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.686053148,48.295896649]},"properties":{"station_code":"A662121201","station_name":"La Mortagne à Autrey - Gare","river_name":"La Mortagne","height_m":"0.18","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.613858407,48.368762829]},"properties":{"station_code":"A670121001","station_name":"La Mortagne à Roville-aux-Chênes","river_name":"La Mortagne","height_m":"0.54","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.524472123,48.487067749]},"properties":{"station_code":"A673122001","station_name":"La Mortagne à Gerbéviller","river_name":"La Mortagne","height_m":"0.53","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.410317707,48.640577052]},"properties":{"station_code":"A686000101","station_name":"Le Sanon à Crévic","river_name":"Le Sanon","height_m":"0.65","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.272227226,48.642507126]},"properties":{"station_code":"A692101001","station_name":"La Meurthe à Laneuveville-devant-Nancy [la Madeleine]","river_name":"La Meurthe","height_m":"0.36","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.179269355,48.710666956]},"properties":{"station_code":"A694102004","station_name":"La Meurthe à Malzéville - Limni","river_name":"La Meurthe","height_m":"1.18","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.121750416,48.789667836]},"properties":{"station_code":"A701061001","station_name":"La Moselle à Custines","river_name":"La Moselle Canalisee","height_m":"0.94","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.043284328,48.866375747]},"properties":{"station_code":"A712201001","station_name":"L'Esch à Jezainville","river_name":"Ruisseau d'Esche","height_m":"0.51","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.961532525,49.012193042]},"properties":{"station_code":"A735201001","station_name":"Le Rupt de Mad à Onville","river_name":"Ruisseau le Rupt de Mad","height_m":"0.90","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.054052977,49.031119254]},"properties":{"station_code":"A740000101","station_name":"La Moselle à Corny-sur-Moselle - Débitmètre","river_name":"La Moselle Canalisee","height_m":"3.20","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.054230085,49.031105749]},"properties":{"station_code":"A740000102","station_name":"La Moselle à Corny-sur-Moselle - limnimètre","river_name":"La Moselle Canalisee","height_m":"3.15","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.167185612,49.122321571]},"properties":{"station_code":"A743061001","station_name":"La Moselle à Metz [Pont des Morts]","river_name":"La Moselle","height_m":"2.41","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.567826579,48.780882803]},"properties":{"station_code":"A758102001","station_name":"La Seille à Moyenvic","river_name":"La Seille","height_m":"1.13","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.505677078,48.8177255]},"properties":{"station_code":"A764201001","station_name":"La Petite Seille à Château-Salins","river_name":"La Petite Seille","height_m":"-0.17","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.457076099,48.783978548]},"properties":{"station_code":"A770101001","station_name":"La Seille à Chambrey","river_name":"La Seille","height_m":"-0.53","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.227562537,48.888160213]},"properties":{"station_code":"A782101001","station_name":"La Seille à Nomeny","river_name":"La Seille","height_m":"0.52","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.188174925,49.100485691]},"properties":{"station_code":"A788101002","station_name":"La Seille à Metz - Pont Lothaire amont","river_name":"La Seille","height_m":"0.96","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.184817563,49.25589423]},"properties":{"station_code":"A793061002","station_name":"La Moselle à Hagondange","river_name":"La Moselle","height_m":"0.65","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.581870466,49.234439422]},"properties":{"station_code":"A800621001","station_name":"Le Ru de Vaux à Morgemoulin","river_name":"Ruisseau de Vaux","height_m":"0.25","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.632484128,49.213609541]},"properties":{"station_code":"A802101001","station_name":"L'Orne à Étain","river_name":"L'Orne","height_m":"0.64","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.876080522,49.142330429]},"properties":{"station_code":"A812020101","station_name":"L'Yron à Jarny [Droitaumont]","river_name":"L'Yron","height_m":"0.36","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.881716087,49.167701088]},"properties":{"station_code":"A820101001","station_name":"L'Orne à Jarny [Labry]","river_name":"L'Orne","height_m":"-1.59","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.883490209,49.295329372]},"properties":{"station_code":"A830020101","station_name":"Le Woigot à Tucquegnieux","river_name":"Ruisseau le Woigot","height_m":"0.11","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.927075058,49.26862436]},"properties":{"station_code":"A831030001","station_name":"La Vallée à Mance","river_name":"Ruisseau de la Vallee","height_m":"-0.08","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.933377578,49.246952959]},"properties":{"station_code":"A832201001","station_name":"Le Woigot à Briey","river_name":"Ruisseau le Woigot","height_m":"0.86","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.041718824,49.248631336]},"properties":{"station_code":"A840101001","station_name":"L'Orne à Moyeuvre-Grande","river_name":"L'Orne","height_m":"-0.17","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.003350663,49.285514869]},"properties":{"station_code":"A842020101","station_name":"Le Conroy à Moyeuvre-Petite","river_name":"Ruisseau le Conroy","height_m":"0.65","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.072001471,49.256392246]},"properties":{"station_code":"A843101001","station_name":"L'Orne à Rosselange","river_name":"L'Orne","height_m":"0.46","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.172718737,49.316716181]},"properties":{"station_code":"A850061001","station_name":"La Moselle à Uckange","river_name":"La Moselle","height_m":"0.98","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.154020284,49.3433312]},"properties":{"station_code":"A860304001","station_name":"Le Veymerange à Thionville","river_name":"Ruisseau le Veymerange","height_m":"0.06","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.03539378,49.343536813]},"properties":{"station_code":"A861202001","station_name":"La Fensch à Knutange","river_name":"La Fensch","height_m":"0.51","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.167345104,49.39528479]},"properties":{"station_code":"A864030001","station_name":"La Kiesel à Hettange-Grande","river_name":"Ruisseau la Kiesel","height_m":"0.45","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.272360241,49.391885444]},"properties":{"station_code":"A873201001","station_name":"Le Canner à Kœnigsmacker","river_name":"Ruisseau le Canner","height_m":"0.70","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.024384566,49.445258963]},"properties":{"station_code":"A891030101","station_name":"Le Kayl à Ottange","river_name":"Ruisseau Kaelbach","height_m":"0.34","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.383258017,49.02861696]},"properties":{"station_code":"A973121001","station_name":"La Nied [Française] à Ancerville","river_name":"La Nied","height_m":"0.12","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.421310648,49.146784283]},"properties":{"station_code":"A975201001","station_name":"La Nied [Française] à Condé-Northen [Pontigny]","river_name":"La Nied","height_m":"0.42","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.61424975,49.046535877]},"properties":{"station_code":"A983201001","station_name":"La Nied Allemande à Faulquemont","river_name":"La Nied Allemande","height_m":"0.27","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.446070936,49.142441775]},"properties":{"station_code":"A986201001","station_name":"La Nied Allemande à Varize","river_name":"La Nied Allemande","height_m":"0.91","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.614415096,48.240913254]},"properties":{"station_code":"B022001001","station_name":"La Meuse à Goncourt","river_name":"La Meuse","height_m":"0.46","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.664011145,48.224397022]},"properties":{"station_code":"B105201001","station_name":"Le Mouzon à Sommerécourt","river_name":"Le Mouzon","height_m":"0.74","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.710074637,48.317446134]},"properties":{"station_code":"B109201001","station_name":"Le Mouzon à Circourt-sur-Mouzon [Villars]","river_name":"Le Mouzon","height_m":"0.75","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.683329781,48.358619594]},"properties":{"station_code":"B110000001","station_name":"La Meuse à Neufchâteau","river_name":"La Meuse","height_m":"0.79","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.676028819,48.439998867]},"properties":{"station_code":"B115001001","station_name":"La Meuse à Domrémy-la-Pucelle","river_name":"La Meuse","height_m":"0.73","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.902062956,48.253938727]},"properties":{"station_code":"B122201001","station_name":"Le Vair à Belmont-sur-Vair","river_name":"Le Vair","height_m":"0.43","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.733156323,48.402742968]},"properties":{"station_code":"B128201001","station_name":"Le Vair à Soulosse-sous-Saint-Élophe","river_name":"Le Vair","height_m":"0.95","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.693563084,48.452420212]},"properties":{"station_code":"B130001001","station_name":"La Meuse à Maxey-sur-Meuse","river_name":"La Meuse","height_m":"0.46","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.678670353,48.601857218]},"properties":{"station_code":"B134001001","station_name":"La Meuse à Vaucouleurs [Chalaines]","river_name":"La Meuse","height_m":"0.11","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.678916146,48.601356666]},"properties":{"station_code":"B134001002","station_name":"La Meuse à Vaucouleurs [Chalaines] - amont","river_name":"La Meuse","height_m":"0.60","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.765529958,48.549339386]},"properties":{"station_code":"B204201001","station_name":"L'Aroffe à Vannes-le-Châtel","river_name":"Ruisseau l'Aroffe","height_m":"0.40","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.681394869,48.709093481]},"properties":{"station_code":"B210000101","station_name":"La Meuse à Troussey","river_name":"La Meuse","height_m":"0.44","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.602961919,48.768316795]},"properties":{"station_code":"B213001001","station_name":"La Meuse à Commercy","river_name":"La Meuse","height_m":"0.82","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.53063369,48.870992372]},"properties":{"station_code":"B222001001","station_name":"La Meuse à Saint-Mihiel","river_name":"La Meuse","height_m":"0.86","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.379092841,49.172261032]},"properties":{"station_code":"B301001001","station_name":"La Meuse à Belleville-sur-Meuse","river_name":"La Meuse","height_m":"0.89","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.386717554,49.162090062]},"properties":{"station_code":"B301001002","station_name":"La Meuse à Verdun - Pont Chaussée","river_name":"La Meuse","height_m":"1.90","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.178850491,49.494346826]},"properties":{"station_code":"B315002001","station_name":"La Meuse à Stenay","river_name":"La Meuse","height_m":"0.82","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.80343548,49.536983467]},"properties":{"station_code":"B400101001","station_name":"La Chiers à Longlaville","river_name":"La Chiers","height_m":"0.09","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.766603965,49.510941115]},"properties":{"station_code":"B402101001","station_name":"La Chiers à Longwy","river_name":"La Chiers","height_m":"0.32","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.657260509,49.475285856]},"properties":{"station_code":"B403101001","station_name":"La Chiers à Montigny-sur-Chiers","river_name":"La Chiers","height_m":"0.15","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.701025967,49.419378452]},"properties":{"station_code":"B413201001","station_name":"La Crusnes à Pierrepont","river_name":"La Crusnes","height_m":"1.02","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.460307525,49.525762461]},"properties":{"station_code":"B422431001","station_name":"Le Ton à Écouviez","river_name":"Le Thon","height_m":"1.07","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.440394695,49.494172723]},"properties":{"station_code":"B435201001","station_name":"L'Othain à Othe","river_name":"L'Othain","height_m":"0.82","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.404344638,49.402499694]},"properties":{"station_code":"B453000101","station_name":"Le Loison à Vittarville","river_name":"Le Loison","height_m":"0.39","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.329882234,49.48052278]},"properties":{"station_code":"B457201001","station_name":"Le Loison à Han-lès-Juvigny","river_name":"Le Loison","height_m":"0.44","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.312743043,49.516132934]},"properties":{"station_code":"B460101001","station_name":"La Chiers à Chauvency-le-Château","river_name":"La Chiers","height_m":"0.23","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.158859906,49.629367897]},"properties":{"station_code":"B463101001","station_name":"La Chiers à Carignan","river_name":"La Chiers","height_m":"1.17","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[5.084206019,49.668721571]},"properties":{"station_code":"B466010101","station_name":"La Chiers à Brévilly","river_name":"La Chiers","height_m":"0.43","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[4.936060665,49.701334161]},"properties":{"station_code":"B502001001","station_name":"La Meuse à Sedan","river_name":"La Meuse","height_m":"3.02","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[4.882921052,49.660373067]},"properties":{"station_code":"B517201001","station_name":"La Bar à Cheveuges","river_name":"La Bar","height_m":"0.82","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[4.714066451,49.727795887]},"properties":{"station_code":"B532201001","station_name":"La Vence à la Francheville","river_name":"La Vence","height_m":"0.62","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[4.715855889,49.75966562]},"properties":{"station_code":"B540001001","station_name":"La Meuse à Charleville-Mézières","river_name":"La Meuse","height_m":"2.59","obs_date":"2026-04-07T13:30:00Z"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[4.752270876,49.774218453]},"properties":{"station_code":"B560010101","station_name":"La Meuse à Aiglemont","river_name":"La Meuse","height_m":"0.82","obs_date":"2026-04-07T13:30:00Z"}}]}
+{
+  "type": "FeatureCollection",
+  "name": "hubeau_rivers",
+  "metadata": {
+    "source": "Hub'Eau API v2 (hubeau.eaufrance.fr)",
+    "description": "Real-time river water level observations from French hydrometric stations",
+    "total_observations_in_db": 16320221,
+    "stations_with_data": 100,
+    "measurement_unit": "mm (raw) / m (converted)",
+    "grandeur_hydro": "H (hauteur/height)",
+    "fetched_at": "2026-04-07T13:43:33.646189+00:00"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.796285291,
+          47.866921289
+        ]
+      },
+      "properties": {
+        "code_station": "A402061001",
+        "station_name": "La Moselle Ã  Fresse-sur-Moselle",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 44.0,
+        "current_height_m": 0.044,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646007+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.685918446,
+          47.909444585
+        ]
+      },
+      "properties": {
+        "code_station": "A405062001",
+        "station_name": "La Moselle Ã  Rupt-sur-Moselle",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 557.0,
+        "current_height_m": 0.557,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646014+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.715932814,
+          47.993393232
+        ]
+      },
+      "properties": {
+        "code_station": "A414020201",
+        "station_name": "La Moselotte Ã  Vagney [Zainvillers]",
+        "river_name": "La Moselotte",
+        "river_code": "A41-0200",
+        "current_height_mm": 541.0,
+        "current_height_m": 0.541,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646017+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.690262579,
+          48.053182554
+        ]
+      },
+      "properties": {
+        "code_station": "A417301001",
+        "station_name": "La Cleurie Ã  Cleurie",
+        "river_name": "Ruisseau de la Cleurie",
+        "river_code": "A4170300",
+        "current_height_mm": 411.0,
+        "current_height_m": 0.411,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646019+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.611130574,
+          48.0670775
+        ]
+      },
+      "properties": {
+        "code_station": "A420063001",
+        "station_name": "La Moselle Ã  Saint-Nabord - Noirgueux",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 888.0,
+        "current_height_m": 0.888,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646021+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.597121367,
+          48.019771926
+        ]
+      },
+      "properties": {
+        "code_station": "A420063002",
+        "station_name": "La Moselle Ã  Remiremont",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 1276.0,
+        "current_height_m": 1.276,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646023+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.751787233,
+          48.185384011
+        ]
+      },
+      "properties": {
+        "code_station": "A433301001",
+        "station_name": "Le Neune Ã  Laveline-devant-BruyÃ¨res",
+        "river_name": "Ruisseau le Neune",
+        "river_code": "A4330300",
+        "current_height_mm": 208.0,
+        "current_height_m": 0.208,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646024+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.603384721,
+          48.13289237
+        ]
+      },
+      "properties": {
+        "code_station": "A436203001",
+        "station_name": "La Vologne Ã  ChenimÃ©nil",
+        "river_name": "La Vologne",
+        "river_code": "A43-0200",
+        "current_height_mm": 333.0,
+        "current_height_m": 0.333,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646027+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.45298063,
+          48.165666233
+        ]
+      },
+      "properties": {
+        "code_station": "A443064001",
+        "station_name": "La Moselle Ã  Ã‰pinal",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 108.0,
+        "current_height_m": 0.108,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646029+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.391243047,
+          48.312435289
+        ]
+      },
+      "properties": {
+        "code_station": "A455000201",
+        "station_name": "La Moselle Ã  ChÃ¢tel-sur-Moselle",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 1623.0,
+        "current_height_m": 1.623,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646031+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.367099557,
+          48.292520452
+        ]
+      },
+      "properties": {
+        "code_station": "A463201001",
+        "station_name": "L'AviÃ¨re Ã  Frizon",
+        "river_name": "L'Aviere",
+        "river_code": "A46-0200",
+        "current_height_mm": 1030.0,
+        "current_height_m": 1.03,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646033+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.260215116,
+          48.536106708
+        ]
+      },
+      "properties": {
+        "code_station": "A511061001",
+        "station_name": "La Moselle Ã  Tonnoy",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 1918.0,
+        "current_height_m": 1.918,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646034+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.263786438,
+          48.532281282
+        ]
+      },
+      "properties": {
+        "code_station": "A511061002",
+        "station_name": "La Moselle Ã  Velle-sur-Moselle",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 1279.0,
+        "current_height_m": 1.279,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646036+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.149771693,
+          48.213998759
+        ]
+      },
+      "properties": {
+        "code_station": "A523011001",
+        "station_name": "Le Madon Ã  BegnÃ©court [Moulin d'Heucheloup]",
+        "river_name": "Le Madon",
+        "river_code": "A5--0100",
+        "current_height_mm": 354.0,
+        "current_height_m": 0.354,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646037+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.174694523,
+          48.259607832
+        ]
+      },
+      "properties": {
+        "code_station": "A524201001",
+        "station_name": "La Gitte Ã  Velotte-et-TatignÃ©court",
+        "river_name": "Ruisseau la Gitte",
+        "river_code": "A52-0200",
+        "current_height_mm": 264.0,
+        "current_height_m": 0.264,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646039+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.136364634,
+          48.303258474
+        ]
+      },
+      "properties": {
+        "code_station": "A526102001",
+        "station_name": "Le Madon Ã  Mirecourt - Crues",
+        "river_name": "Le Madon",
+        "river_code": "A5--0100",
+        "current_height_mm": -38.0,
+        "current_height_m": -0.038,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646041+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.110970958,
+          48.50573482
+        ]
+      },
+      "properties": {
+        "code_station": "A542201101",
+        "station_name": "Le Brenon Ã  Houdreville",
+        "river_name": "Le Brenon",
+        "river_code": "A54-0200",
+        "current_height_mm": 304.0,
+        "current_height_m": 0.304,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646042+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.131545756,
+          48.545355659
+        ]
+      },
+      "properties": {
+        "code_station": "A543101001",
+        "station_name": "Le Madon Ã  Pulligny",
+        "river_name": "Le Madon",
+        "river_code": "A5--0100",
+        "current_height_mm": 536.0,
+        "current_height_m": 0.536,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646044+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.896401748,
+          48.66976408
+        ]
+      },
+      "properties": {
+        "code_station": "A573061001",
+        "station_name": "La Moselle Ã  Toul",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 515.0,
+        "current_height_m": 0.515,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646046+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.002528782,
+          48.184729703
+        ]
+      },
+      "properties": {
+        "code_station": "A600101001",
+        "station_name": "La Meurthe Ã  Fraize",
+        "river_name": "La Meurthe",
+        "river_code": "A6--0100",
+        "current_height_mm": 519.0,
+        "current_height_m": 0.519,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646048+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.845062409,
+          48.402032182
+        ]
+      },
+      "properties": {
+        "code_station": "A615103001",
+        "station_name": "La Meurthe Ã  Raon-l'Ã‰tape",
+        "river_name": "La Meurthe",
+        "river_code": "A6--0100",
+        "current_height_mm": 787.0,
+        "current_height_m": 0.787,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646050+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.877878865,
+          48.416320357
+        ]
+      },
+      "properties": {
+        "code_station": "A623201001",
+        "station_name": "La Plaine Ã  Raon-l'Ã‰tape [La Trouche]",
+        "river_name": "La Plaine",
+        "river_code": "A62-0200",
+        "current_height_mm": 432.0,
+        "current_height_m": 0.432,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646052+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.738612663,
+          48.44923718
+        ]
+      },
+      "properties": {
+        "code_station": "A631101001",
+        "station_name": "La Meurthe Ã  Baccarat - aval",
+        "river_name": "La Meurthe",
+        "river_code": "A6--0100",
+        "current_height_mm": 774.0,
+        "current_height_m": 0.774,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646055+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.740048847,
+          48.447732868
+        ]
+      },
+      "properties": {
+        "code_station": "A631101003",
+        "station_name": "La Meurthe Ã  Baccarat - amont",
+        "river_name": "La Meurthe",
+        "river_code": "A6--0100",
+        "current_height_mm": 611.0,
+        "current_height_m": 0.611,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646056+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.481032756,
+          48.582850801
+        ]
+      },
+      "properties": {
+        "code_station": "A634101001",
+        "station_name": "La Meurthe Ã  LunÃ©ville - Aval",
+        "river_name": "La Meurthe",
+        "river_code": "A6--0100",
+        "current_height_mm": 320.0,
+        "current_height_m": 0.32,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646058+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.843907647,
+          48.588128336
+        ]
+      },
+      "properties": {
+        "code_station": "A643112001",
+        "station_name": "La Vezouze Ã  BlÃ¢mont - aval",
+        "river_name": "La Vezouze",
+        "river_code": "A6--0110",
+        "current_height_mm": 295.0,
+        "current_height_m": 0.295,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646061+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.845033347,
+          48.588299085
+        ]
+      },
+      "properties": {
+        "code_station": "A643112002",
+        "station_name": "La Vezouze Ã  BlÃ¢mont - amont",
+        "river_name": "La Vezouze",
+        "river_code": "A6--0110",
+        "current_height_mm": 355.0,
+        "current_height_m": 0.355,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646063+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.800409068,
+          48.518136023
+        ]
+      },
+      "properties": {
+        "code_station": "A648000101",
+        "station_name": "La Blette Ã  Montigny",
+        "river_name": "La Blette",
+        "river_code": "A64-0200",
+        "current_height_mm": 378.0,
+        "current_height_m": 0.378,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646064+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.624852639,
+          48.580949425
+        ]
+      },
+      "properties": {
+        "code_station": "A654111001",
+        "station_name": "La Vezouze Ã  ThiÃ©baumÃ©nil",
+        "river_name": "La Vezouze",
+        "river_code": "A6--0110",
+        "current_height_mm": 343.0,
+        "current_height_m": 0.343,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646066+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.686053148,
+          48.295896649
+        ]
+      },
+      "properties": {
+        "code_station": "A662121201",
+        "station_name": "La Mortagne Ã  Autrey - Gare",
+        "river_name": "La Mortagne",
+        "river_code": "A6--0120",
+        "current_height_mm": 178.0,
+        "current_height_m": 0.178,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646067+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.613858407,
+          48.368762829
+        ]
+      },
+      "properties": {
+        "code_station": "A670121001",
+        "station_name": "La Mortagne Ã  Roville-aux-ChÃªnes",
+        "river_name": "La Mortagne",
+        "river_code": "A6--0120",
+        "current_height_mm": 536.0,
+        "current_height_m": 0.536,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646069+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.524472123,
+          48.487067749
+        ]
+      },
+      "properties": {
+        "code_station": "A673122001",
+        "station_name": "La Mortagne Ã  GerbÃ©viller",
+        "river_name": "La Mortagne",
+        "river_code": "A6--0120",
+        "current_height_mm": 531.0,
+        "current_height_m": 0.531,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646070+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.410317707,
+          48.640577052
+        ]
+      },
+      "properties": {
+        "code_station": "A686000101",
+        "station_name": "Le Sanon Ã  CrÃ©vic",
+        "river_name": "Le Sanon",
+        "river_code": "A68-0200",
+        "current_height_mm": 646.0,
+        "current_height_m": 0.646,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646073+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.272227226,
+          48.642507126
+        ]
+      },
+      "properties": {
+        "code_station": "A692101001",
+        "station_name": "La Meurthe Ã  Laneuveville-devant-Nancy [la Madeleine]",
+        "river_name": "La Meurthe",
+        "river_code": "A6--0100",
+        "current_height_mm": 357.0,
+        "current_height_m": 0.357,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646075+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.179269355,
+          48.710666956
+        ]
+      },
+      "properties": {
+        "code_station": "A694102004",
+        "station_name": "La Meurthe Ã  MalzÃ©ville - Limni",
+        "river_name": "La Meurthe",
+        "river_code": "A6--0100",
+        "current_height_mm": 1184.0,
+        "current_height_m": 1.184,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646076+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.121750416,
+          48.789667836
+        ]
+      },
+      "properties": {
+        "code_station": "A701061001",
+        "station_name": "La Moselle Ã  Custines",
+        "river_name": "La Moselle Canalisee",
+        "river_code": "A---0082",
+        "current_height_mm": 941.0,
+        "current_height_m": 0.941,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646078+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.043284328,
+          48.866375747
+        ]
+      },
+      "properties": {
+        "code_station": "A712201001",
+        "station_name": "L'Esch Ã  Jezainville",
+        "river_name": "Ruisseau d'Esche",
+        "river_code": "A71-0200",
+        "current_height_mm": 510.0,
+        "current_height_m": 0.51,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646079+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.961532525,
+          49.012193042
+        ]
+      },
+      "properties": {
+        "code_station": "A735201001",
+        "station_name": "Le Rupt de Mad Ã  Onville",
+        "river_name": "Ruisseau le Rupt de Mad",
+        "river_code": "A73-0200",
+        "current_height_mm": 902.0,
+        "current_height_m": 0.902,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646081+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.054052977,
+          49.031119254
+        ]
+      },
+      "properties": {
+        "code_station": "A740000101",
+        "station_name": "La Moselle Ã  Corny-sur-Moselle - DÃ©bitmÃ¨tre",
+        "river_name": "La Moselle Canalisee",
+        "river_code": "A---0082",
+        "current_height_mm": 3199.0,
+        "current_height_m": 3.199,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646083+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.054230085,
+          49.031105749
+        ]
+      },
+      "properties": {
+        "code_station": "A740000102",
+        "station_name": "La Moselle Ã  Corny-sur-Moselle - limnimÃ¨tre",
+        "river_name": "La Moselle Canalisee",
+        "river_code": "A---0082",
+        "current_height_mm": 3152.0,
+        "current_height_m": 3.152,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646084+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.167185612,
+          49.122321571
+        ]
+      },
+      "properties": {
+        "code_station": "A743061001",
+        "station_name": "La Moselle Ã  Metz [Pont des Morts]",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 2406.0,
+        "current_height_m": 2.406,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646087+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.567826579,
+          48.780882803
+        ]
+      },
+      "properties": {
+        "code_station": "A758102001",
+        "station_name": "La Seille Ã  Moyenvic",
+        "river_name": "La Seille",
+        "river_code": "A7--0100",
+        "current_height_mm": 1128.0,
+        "current_height_m": 1.128,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646088+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.505677078,
+          48.8177255
+        ]
+      },
+      "properties": {
+        "code_station": "A764201001",
+        "station_name": "La Petite Seille Ã  ChÃ¢teau-Salins",
+        "river_name": "La Petite Seille",
+        "river_code": "A76-0200",
+        "current_height_mm": -175.0,
+        "current_height_m": -0.175,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646090+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.457076099,
+          48.783978548
+        ]
+      },
+      "properties": {
+        "code_station": "A770101001",
+        "station_name": "La Seille Ã  Chambrey",
+        "river_name": "La Seille",
+        "river_code": "A7--0100",
+        "current_height_mm": -530.0,
+        "current_height_m": -0.53,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646091+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.227562537,
+          48.888160213
+        ]
+      },
+      "properties": {
+        "code_station": "A782101001",
+        "station_name": "La Seille Ã  Nomeny",
+        "river_name": "La Seille",
+        "river_code": "A7--0100",
+        "current_height_mm": 516.0,
+        "current_height_m": 0.516,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646093+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.188174925,
+          49.100485691
+        ]
+      },
+      "properties": {
+        "code_station": "A788101002",
+        "station_name": "La Seille Ã  Metz - Pont Lothaire amont",
+        "river_name": "La Seille",
+        "river_code": "A7--0100",
+        "current_height_mm": 959.0,
+        "current_height_m": 0.959,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646094+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.184817563,
+          49.25589423
+        ]
+      },
+      "properties": {
+        "code_station": "A793061002",
+        "station_name": "La Moselle Ã  Hagondange",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 650.0,
+        "current_height_m": 0.65,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646096+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.581870466,
+          49.234439422
+        ]
+      },
+      "properties": {
+        "code_station": "A800621001",
+        "station_name": "Le Ru de Vaux Ã  Morgemoulin",
+        "river_name": "Ruisseau de Vaux",
+        "river_code": "A8010620",
+        "current_height_mm": 246.0,
+        "current_height_m": 0.246,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646098+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.632484128,
+          49.213609541
+        ]
+      },
+      "properties": {
+        "code_station": "A802101001",
+        "station_name": "L'Orne Ã  Ã‰tain",
+        "river_name": "L'Orne",
+        "river_code": "A8--0100",
+        "current_height_mm": 636.0,
+        "current_height_m": 0.636,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646100+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.876080522,
+          49.142330429
+        ]
+      },
+      "properties": {
+        "code_station": "A812020101",
+        "station_name": "L'Yron Ã  Jarny [Droitaumont]",
+        "river_name": "L'Yron",
+        "river_code": "A81-0200",
+        "current_height_mm": 360.0,
+        "current_height_m": 0.36,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646101+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.881716087,
+          49.167701088
+        ]
+      },
+      "properties": {
+        "code_station": "A820101001",
+        "station_name": "L'Orne Ã  Jarny [Labry]",
+        "river_name": "L'Orne",
+        "river_code": "A8--0100",
+        "current_height_mm": -1588.0,
+        "current_height_m": -1.588,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646103+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.883490209,
+          49.295329372
+        ]
+      },
+      "properties": {
+        "code_station": "A830020101",
+        "station_name": "Le Woigot Ã  Tucquegnieux",
+        "river_name": "Ruisseau le Woigot",
+        "river_code": "A83-0200",
+        "current_height_mm": 110.0,
+        "current_height_m": 0.11,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646104+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.927075058,
+          49.26862436
+        ]
+      },
+      "properties": {
+        "code_station": "A831030001",
+        "station_name": "La VallÃ©e Ã  Mance",
+        "river_name": "Ruisseau de la Vallee",
+        "river_code": "A8310300",
+        "current_height_mm": -82.0,
+        "current_height_m": -0.082,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646106+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.933377578,
+          49.246952959
+        ]
+      },
+      "properties": {
+        "code_station": "A832201001",
+        "station_name": "Le Woigot Ã  Briey",
+        "river_name": "Ruisseau le Woigot",
+        "river_code": "A83-0200",
+        "current_height_mm": 864.0,
+        "current_height_m": 0.864,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646107+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.041718824,
+          49.248631336
+        ]
+      },
+      "properties": {
+        "code_station": "A840101001",
+        "station_name": "L'Orne Ã  Moyeuvre-Grande",
+        "river_name": "L'Orne",
+        "river_code": "A8--0100",
+        "current_height_mm": -173.0,
+        "current_height_m": -0.173,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646109+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.003350663,
+          49.285514869
+        ]
+      },
+      "properties": {
+        "code_station": "A842020101",
+        "station_name": "Le Conroy Ã  Moyeuvre-Petite",
+        "river_name": "Ruisseau le Conroy",
+        "river_code": "A84-0200",
+        "current_height_mm": 649.0,
+        "current_height_m": 0.649,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646111+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.072001471,
+          49.256392246
+        ]
+      },
+      "properties": {
+        "code_station": "A843101001",
+        "station_name": "L'Orne Ã  Rosselange",
+        "river_name": "L'Orne",
+        "river_code": "A8--0100",
+        "current_height_mm": 459.0,
+        "current_height_m": 0.459,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646114+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.172718737,
+          49.316716181
+        ]
+      },
+      "properties": {
+        "code_station": "A850061001",
+        "station_name": "La Moselle Ã  Uckange",
+        "river_name": "La Moselle",
+        "river_code": "A---0060",
+        "current_height_mm": 985.0,
+        "current_height_m": 0.985,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646116+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.154020284,
+          49.3433312
+        ]
+      },
+      "properties": {
+        "code_station": "A860304001",
+        "station_name": "Le Veymerange Ã  Thionville",
+        "river_name": "Ruisseau le Veymerange",
+        "river_code": "A8600300",
+        "current_height_mm": 59.0,
+        "current_height_m": 0.059,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646117+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.03539378,
+          49.343536813
+        ]
+      },
+      "properties": {
+        "code_station": "A861202001",
+        "station_name": "La Fensch Ã  Knutange",
+        "river_name": "La Fensch",
+        "river_code": "A85-0200",
+        "current_height_mm": 507.0,
+        "current_height_m": 0.507,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646118+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.167345104,
+          49.39528479
+        ]
+      },
+      "properties": {
+        "code_station": "A864030001",
+        "station_name": "La Kiesel Ã  Hettange-Grande",
+        "river_name": "Ruisseau la Kiesel",
+        "river_code": "A8640300",
+        "current_height_mm": 451.0,
+        "current_height_m": 0.451,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646120+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.272360241,
+          49.391885444
+        ]
+      },
+      "properties": {
+        "code_station": "A873201001",
+        "station_name": "Le Canner Ã  KÅ“nigsmacker",
+        "river_name": "Ruisseau le Canner",
+        "river_code": "A87-0200",
+        "current_height_mm": 700.0,
+        "current_height_m": 0.7,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646122+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.024384566,
+          49.445258963
+        ]
+      },
+      "properties": {
+        "code_station": "A891030101",
+        "station_name": "Le Kayl Ã  Ottange",
+        "river_name": "Ruisseau Kaelbach",
+        "river_code": "A8910300",
+        "current_height_mm": 341.0,
+        "current_height_m": 0.341,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646124+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.383258017,
+          49.02861696
+        ]
+      },
+      "properties": {
+        "code_station": "A973121001",
+        "station_name": "La Nied [FranÃ§aise] Ã  Ancerville",
+        "river_name": "La Nied",
+        "river_code": "A9--0120",
+        "current_height_mm": 120.0,
+        "current_height_m": 0.12,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646126+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.421310648,
+          49.146784283
+        ]
+      },
+      "properties": {
+        "code_station": "A975201001",
+        "station_name": "La Nied [FranÃ§aise] Ã  CondÃ©-Northen [Pontigny]",
+        "river_name": "La Nied",
+        "river_code": "A9--0120",
+        "current_height_mm": 418.0,
+        "current_height_m": 0.418,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646128+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.61424975,
+          49.046535877
+        ]
+      },
+      "properties": {
+        "code_station": "A983201001",
+        "station_name": "La Nied Allemande Ã  Faulquemont",
+        "river_name": "La Nied Allemande",
+        "river_code": "A98-0200",
+        "current_height_mm": 265.0,
+        "current_height_m": 0.265,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646130+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.446070936,
+          49.142441775
+        ]
+      },
+      "properties": {
+        "code_station": "A986201001",
+        "station_name": "La Nied Allemande Ã  Varize",
+        "river_name": "La Nied Allemande",
+        "river_code": "A98-0200",
+        "current_height_mm": 908.0,
+        "current_height_m": 0.908,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646131+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.614415096,
+          48.240913254
+        ]
+      },
+      "properties": {
+        "code_station": "B022001001",
+        "station_name": "La Meuse Ã  Goncourt",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 462.0,
+        "current_height_m": 0.462,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646132+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.664011145,
+          48.224397022
+        ]
+      },
+      "properties": {
+        "code_station": "B105201001",
+        "station_name": "Le Mouzon Ã  SommerÃ©court",
+        "river_name": "Le Mouzon",
+        "river_code": "B10-0200",
+        "current_height_mm": 742.0,
+        "current_height_m": 0.742,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646134+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.710074637,
+          48.317446134
+        ]
+      },
+      "properties": {
+        "code_station": "B109201001",
+        "station_name": "Le Mouzon Ã  Circourt-sur-Mouzon [Villars]",
+        "river_name": "Le Mouzon",
+        "river_code": "B10-0200",
+        "current_height_mm": 752.0,
+        "current_height_m": 0.752,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646135+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.683329781,
+          48.358619594
+        ]
+      },
+      "properties": {
+        "code_station": "B110000001",
+        "station_name": "La Meuse Ã  NeufchÃ¢teau",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 791.0,
+        "current_height_m": 0.791,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646137+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.676028819,
+          48.439998867
+        ]
+      },
+      "properties": {
+        "code_station": "B115001001",
+        "station_name": "La Meuse Ã  DomrÃ©my-la-Pucelle",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 728.0,
+        "current_height_m": 0.728,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646138+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.902062956,
+          48.253938727
+        ]
+      },
+      "properties": {
+        "code_station": "B122201001",
+        "station_name": "Le Vair Ã  Belmont-sur-Vair",
+        "river_name": "Le Vair",
+        "river_code": "B12-0200",
+        "current_height_mm": 433.0,
+        "current_height_m": 0.433,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646140+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.733156323,
+          48.402742968
+        ]
+      },
+      "properties": {
+        "code_station": "B128201001",
+        "station_name": "Le Vair Ã  Soulosse-sous-Saint-Ã‰lophe",
+        "river_name": "Le Vair",
+        "river_code": "B12-0200",
+        "current_height_mm": 955.0,
+        "current_height_m": 0.955,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646142+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.693563084,
+          48.452420212
+        ]
+      },
+      "properties": {
+        "code_station": "B130001001",
+        "station_name": "La Meuse Ã  Maxey-sur-Meuse",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 460.0,
+        "current_height_m": 0.46,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646143+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.678670353,
+          48.601857218
+        ]
+      },
+      "properties": {
+        "code_station": "B134001001",
+        "station_name": "La Meuse Ã  Vaucouleurs [Chalaines]",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 113.0,
+        "current_height_m": 0.113,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646145+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.678916146,
+          48.601356666
+        ]
+      },
+      "properties": {
+        "code_station": "B134001002",
+        "station_name": "La Meuse Ã  Vaucouleurs [Chalaines] - amont",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 601.0,
+        "current_height_m": 0.601,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646147+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.765529958,
+          48.549339386
+        ]
+      },
+      "properties": {
+        "code_station": "B204201001",
+        "station_name": "L'Aroffe Ã  Vannes-le-ChÃ¢tel",
+        "river_name": "Ruisseau l'Aroffe",
+        "river_code": "B20-0200",
+        "current_height_mm": 402.0,
+        "current_height_m": 0.402,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646149+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.681394869,
+          48.709093481
+        ]
+      },
+      "properties": {
+        "code_station": "B210000101",
+        "station_name": "La Meuse Ã  Troussey",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 436.0,
+        "current_height_m": 0.436,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646151+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.602961919,
+          48.768316795
+        ]
+      },
+      "properties": {
+        "code_station": "B213001001",
+        "station_name": "La Meuse Ã  Commercy",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 821.0,
+        "current_height_m": 0.821,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646153+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.53063369,
+          48.870992372
+        ]
+      },
+      "properties": {
+        "code_station": "B222001001",
+        "station_name": "La Meuse Ã  Saint-Mihiel",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 856.0,
+        "current_height_m": 0.856,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646154+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.379092841,
+          49.172261032
+        ]
+      },
+      "properties": {
+        "code_station": "B301001001",
+        "station_name": "La Meuse Ã  Belleville-sur-Meuse",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 891.0,
+        "current_height_m": 0.891,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646156+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.386717554,
+          49.162090062
+        ]
+      },
+      "properties": {
+        "code_station": "B301001002",
+        "station_name": "La Meuse Ã  Verdun - Pont ChaussÃ©e",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 1901.0,
+        "current_height_m": 1.901,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646157+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.178850491,
+          49.494346826
+        ]
+      },
+      "properties": {
+        "code_station": "B315002001",
+        "station_name": "La Meuse Ã  Stenay",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 821.0,
+        "current_height_m": 0.821,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646160+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.80343548,
+          49.536983467
+        ]
+      },
+      "properties": {
+        "code_station": "B400101001",
+        "station_name": "La Chiers Ã  Longlaville",
+        "river_name": "La Chiers",
+        "river_code": "B4--0100",
+        "current_height_mm": 85.0,
+        "current_height_m": 0.085,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646162+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.766603965,
+          49.510941115
+        ]
+      },
+      "properties": {
+        "code_station": "B402101001",
+        "station_name": "La Chiers Ã  Longwy",
+        "river_name": "La Chiers",
+        "river_code": "B4--0100",
+        "current_height_mm": 321.0,
+        "current_height_m": 0.321,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646164+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.657260509,
+          49.475285856
+        ]
+      },
+      "properties": {
+        "code_station": "B403101001",
+        "station_name": "La Chiers Ã  Montigny-sur-Chiers",
+        "river_name": "La Chiers",
+        "river_code": "B4--0100",
+        "current_height_mm": 149.0,
+        "current_height_m": 0.149,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646165+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.701025967,
+          49.419378452
+        ]
+      },
+      "properties": {
+        "code_station": "B413201001",
+        "station_name": "La Crusnes Ã  Pierrepont",
+        "river_name": "La Crusnes",
+        "river_code": "B41-0200",
+        "current_height_mm": 1017.0,
+        "current_height_m": 1.017,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646167+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.460307525,
+          49.525762461
+        ]
+      },
+      "properties": {
+        "code_station": "B422431001",
+        "station_name": "Le Ton Ã  Ã‰couviez",
+        "river_name": "Le Thon",
+        "river_code": "B4230430",
+        "current_height_mm": 1074.0,
+        "current_height_m": 1.074,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646170+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.440394695,
+          49.494172723
+        ]
+      },
+      "properties": {
+        "code_station": "B435201001",
+        "station_name": "L'Othain Ã  Othe",
+        "river_name": "L'Othain",
+        "river_code": "B43-0200",
+        "current_height_mm": 816.0,
+        "current_height_m": 0.816,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646171+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.404344638,
+          49.402499694
+        ]
+      },
+      "properties": {
+        "code_station": "B453000101",
+        "station_name": "Le Loison Ã  Vittarville",
+        "river_name": "Le Loison",
+        "river_code": "B45-0200",
+        "current_height_mm": 394.0,
+        "current_height_m": 0.394,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646173+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.329882234,
+          49.48052278
+        ]
+      },
+      "properties": {
+        "code_station": "B457201001",
+        "station_name": "Le Loison Ã  Han-lÃ¨s-Juvigny",
+        "river_name": "Le Loison",
+        "river_code": "B45-0200",
+        "current_height_mm": 443.0,
+        "current_height_m": 0.443,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646175+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.312743043,
+          49.516132934
+        ]
+      },
+      "properties": {
+        "code_station": "B460101001",
+        "station_name": "La Chiers Ã  Chauvency-le-ChÃ¢teau",
+        "river_name": "La Chiers",
+        "river_code": "B4--0100",
+        "current_height_mm": 228.0,
+        "current_height_m": 0.228,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646176+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.158859906,
+          49.629367897
+        ]
+      },
+      "properties": {
+        "code_station": "B463101001",
+        "station_name": "La Chiers Ã  Carignan",
+        "river_name": "La Chiers",
+        "river_code": "B4--0100",
+        "current_height_mm": 1174.0,
+        "current_height_m": 1.174,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646178+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.084206019,
+          49.668721571
+        ]
+      },
+      "properties": {
+        "code_station": "B466010101",
+        "station_name": "La Chiers Ã  BrÃ©villy",
+        "river_name": "La Chiers",
+        "river_code": "B4--0100",
+        "current_height_mm": 428.0,
+        "current_height_m": 0.428,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646180+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.936060665,
+          49.701334161
+        ]
+      },
+      "properties": {
+        "code_station": "B502001001",
+        "station_name": "La Meuse Ã  Sedan",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 3018.0,
+        "current_height_m": 3.018,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646181+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.882921052,
+          49.660373067
+        ]
+      },
+      "properties": {
+        "code_station": "B517201001",
+        "station_name": "La Bar Ã  Cheveuges",
+        "river_name": "La Bar",
+        "river_code": "B51-0200",
+        "current_height_mm": 820.0,
+        "current_height_m": 0.82,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646183+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.714066451,
+          49.727795887
+        ]
+      },
+      "properties": {
+        "code_station": "B532201001",
+        "station_name": "La Vence Ã  la Francheville",
+        "river_name": "La Vence",
+        "river_code": "B53-0200",
+        "current_height_mm": 622.0,
+        "current_height_m": 0.622,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646184+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.715855889,
+          49.75966562
+        ]
+      },
+      "properties": {
+        "code_station": "B540001001",
+        "station_name": "La Meuse Ã  Charleville-MÃ©ziÃ¨res",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 2586.0,
+        "current_height_m": 2.586,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646186+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.752270876,
+          49.774218453
+        ]
+      },
+      "properties": {
+        "code_station": "B560010101",
+        "station_name": "La Meuse Ã  Aiglemont",
+        "river_name": "La Meuse",
+        "river_code": "B---0000",
+        "current_height_mm": 820.0,
+        "current_height_m": 0.82,
+        "observation_date": "2026-04-07T13:30:00Z",
+        "grandeur": "H",
+        "source": "hubeau.eaufrance.fr",
+        "fetched_at": "2026-04-07T13:43:33.646188+00:00"
+      }
+    }
+  ]
+}
