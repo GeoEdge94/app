@@ -9,6 +9,7 @@ import { ZoneCard } from "@/components/betting/ZoneCard";
 import { ZoneDetail } from "@/components/betting/ZoneDetail";
 import { BetSlip } from "@/components/betting/BetSlip";
 import { PortfolioView } from "@/components/betting/PortfolioView";
+import { BottomSheet } from "@/components/layout/BottomSheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Flame, TrendingUp, Users, Loader2, Database, MapPin } from "lucide-react";
@@ -133,12 +134,15 @@ export default function Home() {
     );
   }
 
-  // Sheet height — collapsed shows a peek on mobile
-  const sheetHeight = sheetSnap === "collapsed"
-    ? "h-[56px]"
-    : sheetSnap === "full"
-      ? "h-[85dvh]"
-      : "h-[55dvh]";
+  // Peek content for collapsed sheet
+  const peekContent = (
+    <div className="flex items-center justify-between">
+      <span className="text-xs font-semibold truncate">
+        {selectedZone ? selectedZone.name : `${zones.length} zones actives`}
+      </span>
+      {selectedZone && <RiskBadgeMini level={selectedZone.riskLevel} />}
+    </div>
+  );
 
   return (
     <div className="flex flex-col h-dvh overflow-hidden">
@@ -179,41 +183,9 @@ export default function Home() {
         </div>
 
         {/* PANEL / SHEET */}
-        <aside className={`
-          bg-background border-l border-border z-30 flex flex-col
-          md:w-[380px] md:relative md:h-full
-          fixed left-0 right-0 bottom-14 md:bottom-0
-          md:rounded-none rounded-t-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.12)] md:shadow-none
-          transition-all duration-300 ease-out
-          ${sheetHeight} md:!h-full
-        `}>
-          {/* Handle — tap to toggle */}
-          <button
-            className="md:hidden flex justify-center pt-2.5 pb-1 cursor-grab active:cursor-grabbing shrink-0"
-            onClick={() => {
-              if (sheetSnap === "collapsed") {
-                setSheetSnap("half");
-                if (!selectedZone) setPanelView("list");
-              } else {
-                setSheetSnap("collapsed");
-              }
-            }}
-          >
-            <div className="w-10 h-1 rounded-full bg-muted-foreground/25" />
-          </button>
-
-          {/* Collapsed peek — show selected zone name or "Zones" */}
-          {sheetSnap === "collapsed" && (
-            <div className="md:hidden px-4 pb-1 flex items-center justify-between">
-              <span className="text-xs font-semibold truncate">
-                {selectedZone ? selectedZone.name : `${zones.length} zones actives`}
-              </span>
-              {selectedZone && <RiskBadgeMini level={selectedZone.riskLevel} />}
-            </div>
-          )}
-
-          {sheetSnap !== "collapsed" && renderPanel()}
-        </aside>
+        <BottomSheet peekContent={peekContent}>
+          {renderPanel()}
+        </BottomSheet>
       </main>
 
       <BottomNav
