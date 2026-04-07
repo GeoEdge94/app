@@ -12,11 +12,13 @@ interface MapViewProps {
   zones: BettingZone[];
   firesGeoJson: GeoJSON.FeatureCollection | null;
   cadastreGeoJson: GeoJSON.FeatureCollection | null;
+  riversGeoJson: GeoJSON.FeatureCollection | null;
+  vigilanceGeoJson: GeoJSON.FeatureCollection | null;
   onZoneClick: (zone: BettingZone) => void;
   onDeselect: () => void;
 }
 
-export function MapView({ zones, firesGeoJson, cadastreGeoJson, onZoneClick, onDeselect }: MapViewProps) {
+export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, vigilanceGeoJson, onZoneClick, onDeselect }: MapViewProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [loaded, setLoaded] = useState(false);
@@ -163,6 +165,75 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, onZoneClick, onD
         });
       }
 
+      // ─── 7. RIVERS (Hub'Eau stations) ───
+      if (riversGeoJson) {
+        map.addSource("rivers", { type: "geojson", data: riversGeoJson });
+        map.addLayer({
+          id: "rivers-point", type: "circle", source: "rivers",
+          layout: { visibility: "none" },
+          paint: {
+            "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 3, 10, 8],
+            "circle-color": "#3B82F6",
+            "circle-opacity": 0.8,
+            "circle-stroke-color": "#FFFFFF",
+            "circle-stroke-width": 1.5,
+          },
+        });
+        map.addLayer({
+          id: "rivers-label", type: "symbol", source: "rivers",
+          layout: {
+            visibility: "none",
+            "text-field": ["concat", ["get", "station_name"], "\n", ["get", "height_m"], "m"],
+            "text-size": 9,
+            "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+            "text-offset": [0, 1.5],
+            "text-allow-overlap": false,
+          },
+          paint: { "text-color": "#1D4ED8", "text-halo-color": "#FFFFFF", "text-halo-width": 1.5 },
+          minzoom: 8,
+        });
+      }
+
+      // ─── 8. VIGILANCE (department alerts) ───
+      if (vigilanceGeoJson) {
+        map.addSource("vigilance", { type: "geojson", data: vigilanceGeoJson });
+        map.addLayer({
+          id: "vigilance-point", type: "circle", source: "vigilance",
+          layout: { visibility: "none" },
+          paint: {
+            "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 6, 8, 14],
+            "circle-color": [
+              "match", ["get", "level"],
+              "rouge", "#DC2626",
+              "orange", "#F97316",
+              "jaune", "#FBBF24",
+              "#10B981",
+            ],
+            "circle-opacity": 0.6,
+            "circle-stroke-color": [
+              "match", ["get", "level"],
+              "rouge", "#991B1B",
+              "orange", "#C2410C",
+              "jaune", "#D97706",
+              "#059669",
+            ],
+            "circle-stroke-width": 2,
+          },
+        });
+        map.addLayer({
+          id: "vigilance-label", type: "symbol", source: "vigilance",
+          layout: {
+            visibility: "none",
+            "text-field": ["concat", ["get", "department_name"], "\n", ["get", "phenomena"]],
+            "text-size": 10,
+            "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+            "text-anchor": "center",
+            "text-allow-overlap": false,
+          },
+          paint: { "text-color": "#111827", "text-halo-color": "#FFFFFF", "text-halo-width": 2 },
+        });
+      }
+
       // ─── CLICK HANDLERS ───
       map.on("click", "zones-fill", (e) => {
         if (!e.features?.[0]) return;
@@ -275,6 +346,8 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, onZoneClick, onD
     const vectorCfg: Record<string, string[]> = {
       zones: ["zones-fill", "zones-border", "zones-label"],
       fires: ["fires-point", "fires-heat"],
+      rivers: ["rivers-point", "rivers-label"],
+      vigilance: ["vigilance-point", "vigilance-label"],
     };
 
     for (const [key, ids] of Object.entries(vectorCfg)) {

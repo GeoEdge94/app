@@ -18,6 +18,7 @@ import { useFireData } from "@/hooks/useFireData";
 import { useWeatherData } from "@/hooks/useWeatherData";
 import { useZones } from "@/hooks/useZones";
 import { useCadastreData } from "@/hooks/useCadastreData";
+import { useHydroData } from "@/hooks/useHydroData";
 import { MarketsList } from "@/components/markets/MarketsList";
 
 const MapView = dynamic(
@@ -34,6 +35,7 @@ export default function Home() {
   const { fires, count: fireCount } = useFireData();
   const { weather, loading: weatherLoading } = useWeatherData();
   const { cadastre, count: parcelCount } = useCadastreData();
+  const { rivers, vigilance } = useHydroData();
 
   const zones = useMemo(() => {
     return firestoreZones.map((z) => {
@@ -160,7 +162,7 @@ export default function Home() {
               <Loader2 className="h-8 w-8 animate-spin text-primary" />
             </div>
           ) : (
-            <MapView zones={zones} firesGeoJson={fires} cadastreGeoJson={cadastre} onZoneClick={handleZoneSelect} onDeselect={handleDeselect} />
+            <MapView zones={zones} firesGeoJson={fires} cadastreGeoJson={cadastre} riversGeoJson={rivers} vigilanceGeoJson={vigilance} onZoneClick={handleZoneSelect} onDeselect={handleDeselect} />
           )}
           {!zonesLoading && <LayerControls />}
 

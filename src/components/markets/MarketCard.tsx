@@ -3,7 +3,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Droplets, CloudRain, Wind, Flame, FileText, Clock, Users, TrendingUp } from "lucide-react";
+import { Droplets, CloudRain, Wind, Flame, FileText, Clock, Users, TrendingUp, MapPin } from "lucide-react";
+import { MarketMiniChart } from "./MarketMiniChart";
 import type { PredictionMarket, MarketCategory } from "@/lib/markets-data";
 
 const catIcons: Record<MarketCategory, typeof Flame> = {
@@ -52,11 +53,17 @@ export function MarketCard({ market, onSelect }: { market: PredictionMarket; onS
           </div>
         </div>
 
+        {/* Sparkline */}
+        <div className="mb-1.5">
+          <MarketMiniChart yesPrice={market.yesPrice} height={28} />
+        </div>
+
         {/* Bottom stats */}
         <div className="flex items-center justify-between text-[10px] text-muted-foreground">
           <div className="flex items-center gap-3">
             <span className="flex items-center gap-0.5"><TrendingUp className="h-3 w-3" /> {(market.volume / 1000).toFixed(1)}k</span>
             <span className="flex items-center gap-0.5"><Users className="h-3 w-3" /> {market.participants}</span>
+            {market.coordinates && <MapPin className="h-3 w-3 text-primary" />}
           </div>
           <span className="flex items-center gap-0.5"><Clock className="h-3 w-3" /> {daysLeft}j</span>
         </div>

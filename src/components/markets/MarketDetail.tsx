@@ -10,6 +10,7 @@ import {
   ChevronLeft, ExternalLink, Clock, Users, TrendingUp, Shield,
   Droplets, CloudRain, Wind, Flame, FileText, CheckCircle, XCircle,
 } from "lucide-react";
+import { MarketOddsChart } from "./MarketOddsChart";
 import type { PredictionMarket, MarketCategory } from "@/lib/markets-data";
 
 const catIcons: Record<MarketCategory, typeof Flame> = {
@@ -118,6 +119,9 @@ export function MarketDetail({ market, onBack }: { market: PredictionMarket; onB
         </CardContent>
       </Card>
 
+      {/* Charts */}
+      <MarketOddsChart yesPrice={market.yesPrice} title={market.title} />
+
       {/* Stats */}
       <div className="grid grid-cols-3 gap-2">
         <div className="text-center p-2 bg-muted/50 rounded-lg">
@@ -161,6 +165,24 @@ export function MarketDetail({ market, onBack }: { market: PredictionMarket; onB
           </div>
         </CardContent>
       </Card>
+
+      {/* Map link */}
+      {market.coordinates && (
+        <Card className="border-primary/20 bg-primary/5">
+          <CardContent className="p-2.5 flex items-center justify-between">
+            <div className="flex items-center gap-2 text-xs">
+              <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <ExternalLink className="h-3 w-3 text-primary" />
+              </div>
+              <div>
+                <p className="font-medium text-primary">Localisation</p>
+                <p className="text-[10px] text-muted-foreground">{market.coordinates.lat.toFixed(3)}, {market.coordinates.lon.toFixed(3)}</p>
+              </div>
+            </div>
+            <span className="text-[10px] text-muted-foreground">{market.department ? `Dept. ${market.department}` : ""}</span>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Tags */}
       <div className="flex flex-wrap gap-1">

@@ -40,4 +40,4 @@ export interface Bet {
 
 export type RiskLevel = "low" | "moderate" | "high" | "critical";
 
-export type MapLayer = "zones" | "fires" | "cadastre" | "satellite" | "risk";
+export type MapLayer = "zones" | "fires" | "cadastre" | "satellite" | "risk" | "rivers" | "vigilance";
