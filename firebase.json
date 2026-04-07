@@ -19,7 +19,8 @@
       }
     ]
   },
-  "auth": {
+  "_auth_disabled": {
+    "_note": "Auth providers disabled locally — enable in Firebase Console",
     "providers": {
       "anonymous": true,
       "emailPassword": true
