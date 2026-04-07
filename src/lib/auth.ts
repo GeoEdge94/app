@@ -53,7 +53,7 @@ export const useAuthStore = create<AuthState>()(
         } catch (err) {
           // Fallback: if Firebase Auth not configured, create local guest profile
           const msg = (err as Error).message || "";
-          if (msg.includes("CONFIGURATION_NOT_FOUND") || msg.includes("auth/network-request-failed")) {
+          if (msg.includes("CONFIGURATION_NOT_FOUND") || msg.includes("configuration-not-found") || msg.includes("auth/network-request-failed") || msg.includes("auth/invalid-api-key")) {
             const guestProfile: UserProfile = {
               uid: "guest-" + Date.now(),
               email,
@@ -81,7 +81,7 @@ export const useAuthStore = create<AuthState>()(
           return true;
         } catch (err) {
           const msg = (err as Error).message || "";
-          if (msg.includes("CONFIGURATION_NOT_FOUND") || msg.includes("auth/network-request-failed")) {
+          if (msg.includes("CONFIGURATION_NOT_FOUND") || msg.includes("configuration-not-found") || msg.includes("auth/network-request-failed") || msg.includes("auth/invalid-api-key")) {
             const guestProfile: UserProfile = {
               uid: "guest-" + Date.now(),
               email,
