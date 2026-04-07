@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/Header";
 import { BottomNav } from "@/components/layout/BottomNav";
@@ -31,7 +31,10 @@ const MapView = dynamic(
 );
 
 export default function Home() {
-  const { selectedZone, setSelectedZone, deselectZone, sheetSnap, setSheetSnap } = useMapStore();
+  const { selectedZone, setSelectedZone, deselectZone, sheetSnap, setSheetSnap, initDarkMode, darkMode } = useMapStore();
+
+  // Init dark mode from localStorage or system preference
+  useEffect(() => { initDarkMode(); }, [initDarkMode]);
   const [activeTab, setActiveTab] = useState<"map" | "portfolio" | "simulator" | "telegram">("map");
   const [panelView, setPanelView] = useState<"list" | "detail" | "bet">("list");
 
@@ -194,7 +197,7 @@ export default function Home() {
               <Loader2 className="h-8 w-8 animate-spin text-primary" />
             </div>
           ) : (
-            <MapView zones={zones} firesGeoJson={fires} cadastreGeoJson={cadastre} riversGeoJson={rivers} vigilanceGeoJson={vigilance} onZoneClick={handleZoneSelect} onDeselect={handleDeselect} />
+            <MapView key={darkMode ? "dark" : "light"} zones={zones} firesGeoJson={fires} cadastreGeoJson={cadastre} riversGeoJson={rivers} vigilanceGeoJson={vigilance} onZoneClick={handleZoneSelect} onDeselect={handleDeselect} />
           )}
           {!zonesLoading && <LayerControls />}
           {!zonesLoading && <BetBanner />}

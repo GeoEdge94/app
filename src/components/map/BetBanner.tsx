@@ -72,7 +72,7 @@ export function BetBanner() {
             return (
               <div
                 key={`${m.id}-${i}`}
-                className={`shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-full ${colors.bg} backdrop-blur-sm border border-white/30 shadow-sm cursor-pointer hover:shadow-md transition-shadow`}
+                className={`shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-full ${colors.bg} backdrop-blur-sm border border-border/30 shadow-sm cursor-pointer hover:shadow-md transition-shadow`}
               >
                 <div className={`w-1.5 h-1.5 rounded-full ${colors.dot} animate-pulse`} />
                 <Icon className={`h-3 w-3 ${colors.text}`} />

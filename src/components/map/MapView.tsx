@@ -25,14 +25,14 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [loaded, setLoaded] = useState(false);
-  const { activeLayers, selectedZone } = useMapStore();
+  const { activeLayers, selectedZone, darkMode } = useMapStore();
 
   useEffect(() => {
     if (!mapContainer.current || mapRef.current) return;
 
     const map = new maplibregl.Map({
       container: mapContainer.current,
-      style: MAP_STYLES.streets,
+      style: darkMode ? MAP_STYLES.dark : MAP_STYLES.streets,
       center: FRANCE_CENTER,
       zoom: DEFAULT_ZOOM,
       attributionControl: false,

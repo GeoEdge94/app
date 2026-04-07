@@ -11,9 +11,18 @@ interface MapState {
   toggleLayer: (layer: MapLayer) => void;
   setSheetSnap: (snap: "collapsed" | "half" | "full") => void;
   toggleDarkMode: () => void;
+  initDarkMode: () => void;
 }
 
-export const useMapStore = create<MapState>((set) => ({
+function applyDarkClass(dark: boolean) {
+  if (typeof document === "undefined") return;
+  document.documentElement.classList.toggle("dark", dark);
+  // Update meta theme-color
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", dark ? "#0A0A0A" : "#FFFFFF");
+}
+
+export const useMapStore = create<MapState>((set, get) => ({
   selectedZone: null,
   activeLayers: new Set<MapLayer>(["zones", "fires", "markets"]),
   sheetSnap: "half",
@@ -30,5 +39,24 @@ export const useMapStore = create<MapState>((set) => ({
       return { activeLayers: next };
     }),
   setSheetSnap: (snap) => set({ sheetSnap: snap }),
-  toggleDarkMode: () => set((state) => ({ darkMode: !state.darkMode })),
+  toggleDarkMode: () => {
+    const next = !get().darkMode;
+    applyDarkClass(next);
+    try { localStorage.setItem("geoedge-theme", next ? "dark" : "light"); } catch {}
+    set({ darkMode: next });
+  },
+  initDarkMode: () => {
+    if (typeof window === "undefined") return;
+    let dark = false;
+    try {
+      const stored = localStorage.getItem("geoedge-theme");
+      if (stored === "dark") dark = true;
+      else if (stored === "light") dark = false;
+      else dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    } catch {
+      dark = false;
+    }
+    applyDarkClass(dark);
+    set({ darkMode: dark });
+  },
 }));
