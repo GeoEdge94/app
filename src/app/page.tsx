@@ -25,7 +25,9 @@ import { useCadastreData } from "@/hooks/useCadastreData";
 import { useHydroData } from "@/hooks/useHydroData";
 import { MarketsList } from "@/components/markets/MarketsList";
 import { MarketCard } from "@/components/markets/MarketCard";
+import { RealBetCard } from "@/components/betting/RealBetCard";
 import { MARKETS } from "@/lib/markets-data";
+import { REAL_BETS } from "@/lib/real-bets";
 import { MOCK_BETS } from "@/lib/mock-data";
 import { WalletPanel } from "@/components/wallet/WalletPanel";
 
@@ -114,7 +116,28 @@ export default function Home() {
     }
 
     if (activeTab === "simulator") {
-      return <MarketsList />;
+      return (
+        <ScrollArea className="flex-1">
+          <div className="px-3 py-3 space-y-3">
+            {/* Real bets from official sources */}
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-sm font-semibold">Paris reels — Sources officielles</h2>
+                <p className="text-[11px] text-muted-foreground">{REAL_BETS.length} paris avec oracle verifie</p>
+              </div>
+              <span className="text-[9px] text-orange-600 bg-orange-50 dark:bg-orange-950/30 px-1.5 py-0.5 rounded-full font-medium">ORACLE</span>
+            </div>
+            <div className="space-y-2">
+              {REAL_BETS.slice(0, 8).map((bet) => (
+                <RealBetCard key={bet.id} bet={bet} />
+              ))}
+            </div>
+            <Separator />
+            {/* Prediction markets (Polymarket style) */}
+            <MarketsList />
+          </div>
+        </ScrollArea>
+      );
     }
 
     return (
