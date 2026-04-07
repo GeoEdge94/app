@@ -13,9 +13,10 @@ interface MapViewProps {
   firesGeoJson: GeoJSON.FeatureCollection | null;
   cadastreGeoJson: GeoJSON.FeatureCollection | null;
   onZoneClick: (zone: BettingZone) => void;
+  onDeselect: () => void;
 }
 
-export function MapView({ zones, firesGeoJson, cadastreGeoJson, onZoneClick }: MapViewProps) {
+export function MapView({ zones, firesGeoJson, cadastreGeoJson, onZoneClick, onDeselect }: MapViewProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [loaded, setLoaded] = useState(false);
@@ -206,6 +207,16 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, onZoneClick }: M
             .addTo(map);
         });
       }
+
+      // Click on empty map → deselect
+      map.on("click", (e) => {
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ["zones-fill", "fires-point", "cadastre-fill"].filter((id) => !!map.getLayer(id)),
+        });
+        if (features.length === 0) {
+          onDeselect();
+        }
+      });
 
       // Cursors
       const pointer = () => { map.getCanvas().style.cursor = "pointer"; };

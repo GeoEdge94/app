@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/Header";
 import { BottomNav } from "@/components/layout/BottomNav";
@@ -24,17 +24,15 @@ const MapView = dynamic(
 );
 
 export default function Home() {
-  const { selectedZone, setSelectedZone, sheetSnap, setSheetSnap } = useMapStore();
+  const { selectedZone, setSelectedZone, deselectZone, sheetSnap, setSheetSnap } = useMapStore();
   const [activeTab, setActiveTab] = useState<"map" | "portfolio" | "simulator" | "telegram">("map");
   const [panelView, setPanelView] = useState<"list" | "detail" | "bet">("list");
 
-  // Data hooks
   const { zones: firestoreZones, loading: zonesLoading } = useZones();
-  const { fires, loading: firesLoading, count: fireCount } = useFireData();
+  const { fires, count: fireCount } = useFireData();
   const { weather, loading: weatherLoading } = useWeatherData();
   const { cadastre, count: parcelCount } = useCadastreData();
 
-  // Merge live weather
   const zones = useMemo(() => {
     return firestoreZones.map((z) => {
       const w = weather[z.zoneId];
@@ -45,36 +43,45 @@ export default function Home() {
   const totalPool = zones.reduce((s, z) => s + z.pool, 0);
   const totalBets = zones.reduce((s, z) => s + z.activeBets, 0);
 
-  function handleZoneSelect(zone: typeof zones[0]) {
+  // Zone selected from map or card
+  const handleZoneSelect = useCallback((zone: typeof zones[0]) => {
     setSelectedZone(zone);
     setPanelView("detail");
-    if (sheetSnap === "collapsed") setSheetSnap("half");
-  }
+    setSheetSnap("half");
+  }, [setSelectedZone, setSheetSnap]);
 
-  function handleBet() {
+  // Click on empty map → collapse + deselect
+  const handleDeselect = useCallback(() => {
+    deselectZone();
+    setPanelView("list");
+  }, [deselectZone]);
+
+  // Open bet slip
+  const handleBet = useCallback(() => {
     setPanelView("bet");
     setSheetSnap("full");
-  }
+  }, [setSheetSnap]);
 
-  function handleBack() {
-    setPanelView(panelView === "bet" ? "detail" : "list");
-    setSelectedZone(panelView === "bet" ? selectedZone : null);
-  }
+  // Back navigation
+  const handleBack = useCallback(() => {
+    if (panelView === "bet") {
+      setPanelView("detail");
+      setSheetSnap("half");
+    } else {
+      setPanelView("list");
+      deselectZone();
+    }
+  }, [panelView, deselectZone, setSheetSnap]);
 
-  // Panel content based on active tab and view
   function renderPanel() {
-    // Portfolio tab
     if (activeTab === "portfolio") {
       return (
         <ScrollArea className="flex-1">
-          <div className="px-3 py-3">
-            <PortfolioView />
-          </div>
+          <div className="px-3 py-3"><PortfolioView /></div>
         </ScrollArea>
       );
     }
 
-    // Map tab — zone list / detail / bet
     return (
       <ScrollArea className="flex-1">
         {panelView === "list" && (
@@ -87,7 +94,10 @@ export default function Home() {
                 </p>
               </div>
               {!weatherLoading && !zonesLoading && (
-                <span className="text-[9px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full font-medium">LIVE</span>
+                <div className="flex items-center gap-1">
+                  <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" /><span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" /></span>
+                  <span className="text-[9px] text-emerald-600 font-medium">LIVE</span>
+                </div>
               )}
             </div>
             <Separator className="my-1" />
@@ -98,12 +108,7 @@ export default function Home() {
             ) : (
               <div className="px-3 py-2 space-y-2">
                 {zones.map((zone) => (
-                  <ZoneCard
-                    key={zone.zoneId}
-                    zone={zone}
-                    onSelect={handleZoneSelect}
-                    selected={selectedZone?.zoneId === zone.zoneId}
-                  />
+                  <ZoneCard key={zone.zoneId} zone={zone} onSelect={handleZoneSelect} selected={selectedZone?.zoneId === zone.zoneId} />
                 ))}
               </div>
             )}
@@ -111,22 +116,14 @@ export default function Home() {
         )}
 
         {panelView === "detail" && selectedZone && (
-          <div className="px-3 py-3 space-y-3">
-            <ZoneDetail zone={selectedZone} onBack={handleBack} />
-            <Separator />
-            <button
-              onClick={handleBet}
-              className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm flex items-center justify-center gap-2 active:scale-[0.98] transition-transform"
-            >
-              <TrendingUp className="h-4 w-4" />
-              Parier sur cette zone
-            </button>
+          <div className="px-3 py-3">
+            <ZoneDetail zone={selectedZone} onBack={handleBack} onBet={handleBet} />
           </div>
         )}
 
         {panelView === "bet" && selectedZone && (
           <div className="px-3 py-3 space-y-3">
-            <button onClick={handleBack} className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1">
+            <button onClick={handleBack} className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors">
               ← Retour au detail
             </button>
             <BetSlip zone={selectedZone} />
@@ -136,47 +133,43 @@ export default function Home() {
     );
   }
 
+  // Sheet height — collapsed shows a peek on mobile
+  const sheetHeight = sheetSnap === "collapsed"
+    ? "h-[56px]"
+    : sheetSnap === "full"
+      ? "h-[85dvh]"
+      : "h-[55dvh]";
+
   return (
     <div className="flex flex-col h-dvh overflow-hidden">
       <Header />
 
       <main className="flex flex-1 overflow-hidden relative">
-        {/* MAP */}
         <div className="flex-1 relative">
           {zonesLoading ? (
             <div className="w-full h-full flex items-center justify-center bg-muted">
-              <div className="flex flex-col items-center gap-2">
-                <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                <span className="text-sm text-muted-foreground">Chargement Firestore...</span>
-              </div>
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
             </div>
           ) : (
-            <MapView zones={zones} firesGeoJson={fires} cadastreGeoJson={cadastre} onZoneClick={handleZoneSelect} />
+            <MapView zones={zones} firesGeoJson={fires} cadastreGeoJson={cadastre} onZoneClick={handleZoneSelect} onDeselect={handleDeselect} />
           )}
           {!zonesLoading && <LayerControls />}
 
           {/* Stats bar */}
           <div className="absolute left-0 right-0 flex items-center justify-center gap-2.5 px-3 py-1.5 bg-background/80 backdrop-blur-md border-t border-border/50 z-10 bottom-14 md:bottom-0 md:right-[380px]">
-            <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
+            <div className="flex items-center gap-1 text-[10px]">
               <Database className="h-2.5 w-2.5 text-primary" />
               <span className="text-primary font-medium">Firestore</span>
             </div>
             <div className="w-px h-3 bg-border" />
             <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
-              <TrendingUp className="h-2.5 w-2.5" />
-              <span className="font-medium text-foreground">{zones.length}</span> zones
+              <TrendingUp className="h-2.5 w-2.5" /><span className="font-medium text-foreground">{zones.length}</span> zones
             </div>
-            <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
-              <Flame className="h-2.5 w-2.5 text-destructive" />
-              <span className="font-medium text-destructive">{fireCount}</span>
+            <div className="flex items-center gap-1 text-[10px]">
+              <Flame className="h-2.5 w-2.5 text-destructive" /><span className="font-medium text-destructive">{fireCount}</span>
             </div>
-            <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
-              <MapPin className="h-2.5 w-2.5 text-indigo-500" />
-              <span className="font-medium text-indigo-600">{parcelCount > 0 ? `${(parcelCount / 1000).toFixed(0)}k` : "..."}</span>
-            </div>
-            <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
-              <Users className="h-2.5 w-2.5" />
-              <span className="font-medium text-foreground">{totalBets}</span>
+            <div className="flex items-center gap-1 text-[10px]">
+              <MapPin className="h-2.5 w-2.5 text-indigo-500" /><span className="font-medium text-indigo-600">{parcelCount > 0 ? `${(parcelCount / 1000).toFixed(0)}k` : "..."}</span>
             </div>
             <div className="flex items-center gap-1 text-[10px]">
               <span className="font-medium text-emerald-600">{(totalPool / 1000).toFixed(0)}k</span>
@@ -185,27 +178,41 @@ export default function Home() {
           </div>
         </div>
 
-        {/* SIDE PANEL / BOTTOM SHEET */}
-        <aside
-          className={`
-            bg-background border-l border-border z-30 flex flex-col
-            md:w-[380px] md:relative md:h-full
-            fixed left-0 right-0
-            md:rounded-none rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:shadow-none
-            transition-[height] duration-300 ease-out
-            ${sheetSnap === "collapsed" ? "h-[100px]" : sheetSnap === "full" ? "h-[85dvh]" : "h-[55dvh]"}
-            md:!h-full bottom-14 md:bottom-0
-          `}
-        >
-          {/* Sheet handle */}
+        {/* PANEL / SHEET */}
+        <aside className={`
+          bg-background border-l border-border z-30 flex flex-col
+          md:w-[380px] md:relative md:h-full
+          fixed left-0 right-0 bottom-14 md:bottom-0
+          md:rounded-none rounded-t-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.12)] md:shadow-none
+          transition-all duration-300 ease-out
+          ${sheetHeight} md:!h-full
+        `}>
+          {/* Handle — tap to toggle */}
           <button
-            className="md:hidden flex justify-center pt-2 pb-1 cursor-grab active:cursor-grabbing"
-            onClick={() => setSheetSnap(sheetSnap === "collapsed" ? "half" : "collapsed")}
+            className="md:hidden flex justify-center pt-2.5 pb-1 cursor-grab active:cursor-grabbing shrink-0"
+            onClick={() => {
+              if (sheetSnap === "collapsed") {
+                setSheetSnap("half");
+                if (!selectedZone) setPanelView("list");
+              } else {
+                setSheetSnap("collapsed");
+              }
+            }}
           >
-            <div className="w-9 h-1 rounded-full bg-muted-foreground/30" />
+            <div className="w-10 h-1 rounded-full bg-muted-foreground/25" />
           </button>
 
-          {renderPanel()}
+          {/* Collapsed peek — show selected zone name or "Zones" */}
+          {sheetSnap === "collapsed" && (
+            <div className="md:hidden px-4 pb-1 flex items-center justify-between">
+              <span className="text-xs font-semibold truncate">
+                {selectedZone ? selectedZone.name : `${zones.length} zones actives`}
+              </span>
+              {selectedZone && <RiskBadgeMini level={selectedZone.riskLevel} />}
+            </div>
+          )}
+
+          {sheetSnap !== "collapsed" && renderPanel()}
         </aside>
       </main>
 
@@ -213,10 +220,18 @@ export default function Home() {
         active={activeTab}
         onTabChange={(tab) => {
           setActiveTab(tab);
-          if (tab === "map") setPanelView("list");
-          setSheetSnap("half");
+          if (tab === "map") { setPanelView("list"); setSheetSnap("half"); }
+          else { setSheetSnap("half"); }
         }}
       />
     </div>
   );
+}
+
+// Mini risk badge for collapsed peek
+function RiskBadgeMini({ level }: { level: string }) {
+  const colors: Record<string, string> = {
+    critical: "bg-purple-500", high: "bg-red-500", moderate: "bg-amber-500", low: "bg-emerald-500",
+  };
+  return <div className={`w-2 h-2 rounded-full ${colors[level] || "bg-gray-400"}`} />;
 }
