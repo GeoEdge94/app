@@ -9,6 +9,7 @@ import { RISK_COLORS } from "@/lib/risk-colors";
 import { marketsToGeoJson } from "@/lib/markets-geojson";
 import { marketZonesToGeoJson } from "@/lib/market-zones-geo";
 import { activeBetsToGeoJson } from "@/lib/mock-data";
+import { curatedBetsToGeoJson } from "@/lib/curated-bets-geojson";
 import type { BettingZone } from "@/types";
 
 interface MapViewProps {
@@ -438,6 +439,91 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
           .addTo(map);
       });
 
+      // ─── 11. CURATED BETS (verified geospatial bets from 4 platforms) ───
+      const curatedGeo = curatedBetsToGeoJson();
+      map.addSource("curated-bets", { type: "geojson", data: curatedGeo });
+
+      // Outer ring
+      map.addLayer({
+        id: "curated-ring", type: "circle", source: "curated-bets",
+        paint: {
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 3, 6, 8, 14, 12, 20],
+          "circle-color": ["get", "color"],
+          "circle-opacity": ["case", ["get", "active"], 0.25, 0.1],
+          "circle-stroke-color": ["get", "color"],
+          "circle-stroke-width": ["case", ["get", "active"], 2, 1],
+          "circle-stroke-opacity": ["case", ["get", "active"], 0.8, 0.3],
+        },
+      });
+
+      // Core dot
+      map.addLayer({
+        id: "curated-dot", type: "circle", source: "curated-bets",
+        paint: {
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 3, 3, 8, 6, 12, 9],
+          "circle-color": ["get", "color"],
+          "circle-opacity": 0.9,
+        },
+      });
+
+      // Label
+      map.addLayer({
+        id: "curated-label", type: "symbol", source: "curated-bets",
+        layout: {
+          "text-field": ["concat", ["get", "probability"], "% ", ["get", "platform"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 4, 8, 10, 11],
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+          "text-offset": [0, 1.8],
+          "text-allow-overlap": false,
+        },
+        paint: {
+          "text-color": ["get", "color"],
+          "text-halo-color": "rgba(0,0,0,0.7)",
+          "text-halo-width": 1.5,
+        },
+        minzoom: 5,
+      });
+
+      // Curated bet click — detailed popup with AI analysis
+      map.on("click", "curated-dot", (e) => {
+        if (!e.features?.[0]) return;
+        const p = e.features[0].properties;
+        const coords = (e.features[0].geometry as GeoJSON.Point).coordinates as [number, number];
+        const prob = p?.probability || 0;
+        const barWidth = Math.max(5, Math.min(95, prob));
+        new maplibregl.Popup({ offset: 14, maxWidth: "300px" })
+          .setLngLat(coords)
+          .setHTML(
+            `<div style="font-size:12px;line-height:1.5;font-family:Inter,system-ui,sans-serif">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+                <span style="background:${p?.color};color:white;font-size:9px;font-weight:700;padding:1px 6px;border-radius:9px">${p?.category?.toUpperCase()}</span>
+                <span style="font-size:9px;color:#9CA3AF">${p?.platform}</span>
+                ${p?.active === "true" || p?.active === true ? '<span style="font-size:8px;color:#10B981;font-weight:600">ACTIF</span>' : '<span style="font-size:8px;color:#6B7280">RESOLU</span>'}
+              </div>
+              <strong style="font-size:13px;line-height:1.3;display:block;margin-bottom:6px">${p?.title}</strong>
+              <div style="background:#1F2937;border-radius:6px;height:8px;margin-bottom:4px;overflow:hidden">
+                <div style="background:${p?.color};height:100%;width:${barWidth}%;border-radius:6px"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:8px">
+                <span style="color:#10B981;font-weight:700">Oui ${prob}%</span>
+                <span style="color:#EF4444;font-weight:700">Non ${100 - prob}%</span>
+              </div>
+              <div style="background:#111827;border-radius:8px;padding:8px;margin-bottom:6px">
+                <div style="font-size:9px;color:#9CA3AF;margin-bottom:3px;font-weight:600">ANALYSE AI</div>
+                <div style="font-size:11px;color:#E5E7EB;line-height:1.4">${p?.ai_analysis || ""}</div>
+              </div>
+              <div style="display:flex;gap:8px;font-size:10px;color:#9CA3AF">
+                <span>Source: <strong style="color:#60A5FA">${p?.measurable_by || ""}</strong></span>
+              </div>
+              <div style="font-size:10px;color:#9CA3AF;margin-top:2px">
+                Couche: <strong>${p?.data_layer || ""}</strong> | Confiance: <strong>${p?.confidence || ""}</strong>
+              </div>
+              ${p?.volume ? `<div style="font-size:10px;color:#9CA3AF;margin-top:2px">Volume: <strong style="color:#10B981">$${Number(p.volume).toLocaleString()}</strong></div>` : ""}
+            </div>`
+          )
+          .addTo(map);
+      });
+
       // Market click popup
       map.on("click", "markets-point", (e) => {
         if (!e.features?.[0]) return;
@@ -512,7 +598,7 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
       // Cursors
       const pointer = () => { map.getCanvas().style.cursor = "pointer"; };
       const reset = () => { map.getCanvas().style.cursor = ""; };
-      ["zones-fill", "fires-point", "cadastre-fill", "markets-point", "bets-point"].forEach((id) => {
+      ["zones-fill", "fires-point", "cadastre-fill", "markets-point", "bets-point", "curated-dot"].forEach((id) => {
         if (map.getLayer(id)) {
           map.on("mouseenter", id, pointer);
           map.on("mouseleave", id, reset);
@@ -568,7 +654,7 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
       fires: ["fires-point", "fires-heat"],
       rivers: ["rivers-point", "rivers-label"],
       vigilance: ["vigilance-point", "vigilance-label"],
-      markets: ["markets-point", "markets-glow", "markets-label", "market-zones-fill", "market-zones-border", "market-zones-label"],
+      markets: ["markets-point", "markets-glow", "markets-label", "market-zones-fill", "market-zones-border", "market-zones-label", "curated-ring", "curated-dot", "curated-label"],
     };
 
     for (const [key, ids] of Object.entries(vectorCfg)) {
