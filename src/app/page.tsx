@@ -18,6 +18,7 @@ import { useFireData } from "@/hooks/useFireData";
 import { useWeatherData } from "@/hooks/useWeatherData";
 import { useZones } from "@/hooks/useZones";
 import { useCadastreData } from "@/hooks/useCadastreData";
+import { MarketsList } from "@/components/markets/MarketsList";
 
 const MapView = dynamic(
   () => import("@/components/map/MapView").then((m) => ({ default: m.MapView })),
@@ -81,6 +82,10 @@ export default function Home() {
           <div className="px-3 py-3"><PortfolioView /></div>
         </ScrollArea>
       );
+    }
+
+    if (activeTab === "simulator") {
+      return <MarketsList />;
     }
 
     return (
