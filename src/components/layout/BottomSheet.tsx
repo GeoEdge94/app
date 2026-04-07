@@ -4,8 +4,6 @@ import { useRef, useCallback, useEffect, type ReactNode } from "react";
 import { useMapStore } from "@/stores/useMapStore";
 
 const SNAP = { collapsed: 92, half: 45, full: 12 } as const;
-const HANDLE_HEIGHT = 44;
-const DEAD_ZONE = 6;
 
 interface BottomSheetProps {
   children: ReactNode;
@@ -15,14 +13,19 @@ interface BottomSheetProps {
 export function BottomSheet({ children, peekContent }: BottomSheetProps) {
   const sheetRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const isDragging = useRef(false);
-  const startY = useRef(0);
-  const startTop = useRef(0);
-  const lastY = useRef(0);
-  const lastTime = useRef(0);
-  const velocity = useRef(0);
-  const decided = useRef(false); // have we decided scroll vs drag?
+  const handleRef = useRef<HTMLDivElement>(null);
   const { sheetSnap, setSheetSnap } = useMapStore();
+
+  // Drag state
+  const state = useRef({
+    dragging: false,
+    decided: false,
+    startY: 0,
+    startTop: 0,
+    prevY: 0,
+    prevT: 0,
+    vel: 0,
+  });
 
   const getTopVh = useCallback(() => {
     if (!sheetRef.current) return SNAP.half;
@@ -35,116 +38,113 @@ export function BottomSheet({ children, peekContent }: BottomSheetProps) {
     sheetRef.current.style.top = `${vh}vh`;
   }, []);
 
-  const snapTo = useCallback((snap: "collapsed" | "half" | "full") => {
-    setSheetSnap(snap);
-    animateTo(SNAP[snap]);
+  const snapTo = useCallback((s: "collapsed" | "half" | "full") => {
+    setSheetSnap(s);
+    animateTo(SNAP[s]);
   }, [setSheetSnap, animateTo]);
 
-  useEffect(() => {
-    const sheet = sheetRef.current;
-    const content = contentRef.current;
-    if (!sheet || !content) return;
+  const moveSheet = useCallback((y: number) => {
+    const s = state.current;
+    const dyVh = ((y - s.startY) / window.innerHeight) * 100;
+    const top = Math.max(SNAP.full - 2, Math.min(SNAP.collapsed + 1, s.startTop + dyVh));
+    if (sheetRef.current) {
+      sheetRef.current.style.transition = "none";
+      sheetRef.current.style.top = `${top}vh`;
+    }
+    const now = Date.now();
+    const dt = now - s.prevT;
+    if (dt > 0) s.vel = ((y - s.prevY) / dt) * 16;
+    s.prevY = y;
+    s.prevT = now;
+  }, []);
 
-    function handleStart(e: TouchEvent) {
+  const endDrag = useCallback(() => {
+    const s = state.current;
+    if (!s.dragging) return;
+    s.dragging = false;
+    s.decided = false;
+    const top = getTopVh();
+    const v = s.vel;
+    if (v > 3) { snapTo("collapsed"); return; }
+    if (v < -3) { snapTo("full"); return; }
+    const dists = (Object.keys(SNAP) as Array<keyof typeof SNAP>).map((k) => ({ snap: k, d: Math.abs(top - SNAP[k]) }));
+    dists.sort((a, b) => a.d - b.d);
+    snapTo(dists[0].snap);
+  }, [getTopVh, snapTo]);
+
+  // ─── HANDLE touch (always drags) ───
+  useEffect(() => {
+    const handle = handleRef.current;
+    if (!handle) return;
+
+    function onStart(e: TouchEvent) {
       const y = e.touches[0].clientY;
-      startY.current = y;
-      startTop.current = getTopVh();
-      lastY.current = y;
-      lastTime.current = Date.now();
-      velocity.current = 0;
-      isDragging.current = false;
-      decided.current = false;
+      state.current = { dragging: true, decided: true, startY: y, startTop: getTopVh(), prevY: y, prevT: Date.now(), vel: 0 };
+    }
+    function onMove(e: TouchEvent) {
+      if (!state.current.dragging) return;
+      e.preventDefault();
+      moveSheet(e.touches[0].clientY);
+    }
+    function onEnd() { endDrag(); }
+
+    handle.addEventListener("touchstart", onStart, { passive: true });
+    handle.addEventListener("touchmove", onMove, { passive: false });
+    handle.addEventListener("touchend", onEnd, { passive: true });
+    return () => {
+      handle.removeEventListener("touchstart", onStart);
+      handle.removeEventListener("touchmove", onMove);
+      handle.removeEventListener("touchend", onEnd);
+    };
+  }, [getTopVh, moveSheet, endDrag]);
+
+  // ─── CONTENT touch (drag only when scrolled to top + pulling down) ───
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+
+    function onStart(e: TouchEvent) {
+      const y = e.touches[0].clientY;
+      state.current = { dragging: false, decided: false, startY: y, startTop: getTopVh(), prevY: y, prevT: Date.now(), vel: 0 };
     }
 
-    function handleMove(e: TouchEvent) {
+    function onMove(e: TouchEvent) {
+      const s = state.current;
       const y = e.touches[0].clientY;
-      const dy = y - startY.current;
-      const absDy = Math.abs(dy);
+      const dy = y - s.startY;
 
-      // Wait for dead zone before deciding
-      if (!decided.current) {
-        if (absDy < DEAD_ZONE) return;
-        decided.current = true;
-
-        // Check: should we drag the sheet or let content scroll?
-        const isOnHandle = (() => {
-          const sheetRect = sheet!.getBoundingClientRect();
-          return (startY.current - sheetRect.top) < HANDLE_HEIGHT;
-        })();
-
-        const contentAtTop = content!.scrollTop <= 1;
+      if (!s.decided) {
+        if (Math.abs(dy) < 8) return;
+        s.decided = true;
+        const atTop = content!.scrollTop <= 0;
         const pullingDown = dy > 0;
-
-        // Drag sheet if: on handle, OR content at top AND pulling down
-        if (isOnHandle || (contentAtTop && pullingDown)) {
-          isDragging.current = true;
-          // Reset start to current position for smooth start
-          startY.current = y;
-          startTop.current = getTopVh();
-          sheet!.style.transition = "none";
-        } else {
-          isDragging.current = false;
-          return; // let browser handle scroll
+        if (atTop && pullingDown) {
+          s.dragging = true;
+          s.startY = y;
+          s.startTop = getTopVh();
         }
       }
 
-      if (!isDragging.current) return;
-
-      // Prevent scroll while dragging sheet
+      if (!s.dragging) return;
       e.preventDefault();
-      e.stopPropagation();
-
-      const dyVh = ((y - startY.current) / window.innerHeight) * 100;
-      const newTop = Math.max(SNAP.full - 2, Math.min(SNAP.collapsed + 1, startTop.current + dyVh));
-      sheet!.style.top = `${newTop}vh`;
-
-      // Track velocity
-      const now = Date.now();
-      const dt = now - lastTime.current;
-      if (dt > 0) {
-        velocity.current = ((y - lastY.current) / dt) * 16;
-      }
-      lastY.current = y;
-      lastTime.current = now;
+      moveSheet(y);
     }
 
-    function handleEnd() {
-      if (!isDragging.current) return;
-      isDragging.current = false;
-      decided.current = false;
+    function onEnd() { endDrag(); }
 
-      const topVh = getTopVh();
-      const v = velocity.current;
-
-      // Flick
-      if (v > 3) { snapTo("collapsed"); return; }
-      if (v < -3) { snapTo("full"); return; }
-
-      // Nearest snap
-      const snaps = [
-        { snap: "collapsed" as const, d: Math.abs(topVh - SNAP.collapsed) },
-        { snap: "half" as const, d: Math.abs(topVh - SNAP.half) },
-        { snap: "full" as const, d: Math.abs(topVh - SNAP.full) },
-      ];
-      snaps.sort((a, b) => a.d - b.d);
-      snapTo(snaps[0].snap);
-    }
-
-    // Attach to BOTH sheet (for handle) and content (for scroll-at-top detection)
-    sheet.addEventListener("touchstart", handleStart, { passive: true });
-    sheet.addEventListener("touchmove", handleMove, { passive: false });
-    sheet.addEventListener("touchend", handleEnd, { passive: true });
-
+    content.addEventListener("touchstart", onStart, { passive: true });
+    content.addEventListener("touchmove", onMove, { passive: false });
+    content.addEventListener("touchend", onEnd, { passive: true });
     return () => {
-      sheet.removeEventListener("touchstart", handleStart);
-      sheet.removeEventListener("touchmove", handleMove);
-      sheet.removeEventListener("touchend", handleEnd);
+      content.removeEventListener("touchstart", onStart);
+      content.removeEventListener("touchmove", onMove);
+      content.removeEventListener("touchend", onEnd);
     };
-  }, [getTopVh, snapTo]);
+  }, [getTopVh, moveSheet, endDrag]);
 
   // Sync from store
   useEffect(() => {
-    if (isDragging.current) return;
+    if (state.current.dragging) return;
     animateTo(SNAP[sheetSnap]);
   }, [sheetSnap, animateTo]);
 
@@ -163,21 +163,21 @@ export function BottomSheet({ children, peekContent }: BottomSheetProps) {
         className="md:hidden fixed left-0 right-0 z-30 flex flex-col bg-background rounded-t-2xl shadow-[0_-8px_30px_rgba(0,0,0,0.15)]"
         style={{ top: `${SNAP[sheetSnap]}vh`, bottom: "56px" }}
       >
-        {/* Handle area */}
-        <div className="flex flex-col items-center shrink-0 select-none">
-          <div className="w-full flex justify-center pt-3 pb-1">
-            <div className="w-9 h-[5px] rounded-full bg-muted-foreground/25" />
+        {/* Handle — toujours draggable */}
+        <div ref={handleRef} className="flex flex-col items-center shrink-0 select-none cursor-grab active:cursor-grabbing">
+          <div className="w-full flex justify-center pt-3 pb-2">
+            <div className="w-10 h-[5px] rounded-full bg-muted-foreground/25" />
           </div>
           {isCollapsed && peekContent && (
             <div className="w-full px-4 pb-2">{peekContent}</div>
           )}
         </div>
 
-        {/* Content */}
+        {/* Content — scroll normalement, drag sheet quand en haut + pull down */}
         <div
           ref={contentRef}
           className={`flex-1 overflow-y-auto ${isCollapsed ? "invisible" : "visible"}`}
-          style={{ overscrollBehavior: "none", WebkitOverflowScrolling: "touch" }}
+          style={{ overscrollBehavior: "none" }}
         >
           {children}
         </div>
