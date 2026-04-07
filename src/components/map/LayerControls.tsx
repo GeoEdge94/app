@@ -1,13 +1,14 @@
 "use client";
 
 import { Switch } from "@/components/ui/switch";
-import { Flame, Map, Building2, Satellite, AlertTriangle, Droplets, CloudRain } from "lucide-react";
+import { Flame, Map, Building2, Satellite, AlertTriangle, Droplets, CloudRain, CircleDot } from "lucide-react";
 import { useMapStore } from "@/stores/useMapStore";
 import type { MapLayer } from "@/types";
 
 const layers: { id: MapLayer; label: string; icon: typeof Flame; color: string }[] = [
   { id: "zones", label: "Zones", icon: Map, color: "bg-primary" },
   { id: "fires", label: "Feux", icon: Flame, color: "bg-destructive" },
+  { id: "markets", label: "Marches", icon: CircleDot, color: "bg-violet-500" },
   { id: "rivers", label: "Rivieres", icon: Droplets, color: "bg-blue-500" },
   { id: "vigilance", label: "Vigilance", icon: CloudRain, color: "bg-orange-500" },
   { id: "cadastre", label: "Cadastre", icon: Building2, color: "bg-gray-500" },

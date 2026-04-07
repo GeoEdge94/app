@@ -6,6 +6,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { useMapStore } from "@/stores/useMapStore";
 import { MAP_STYLES, TILE_SOURCES, FRANCE_CENTER, DEFAULT_ZOOM } from "@/lib/map-styles";
 import { RISK_COLORS } from "@/lib/risk-colors";
+import { marketsToGeoJson } from "@/lib/markets-geojson";
 import type { BettingZone } from "@/types";
 
 interface MapViewProps {
@@ -234,12 +235,105 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
         });
       }
 
+      // ─── 9. MARKETS (prediction market pins) ───
+      const marketsGeoJson = marketsToGeoJson();
+      map.addSource("markets", { type: "geojson", data: marketsGeoJson });
+
+      // Outer glow by category
+      map.addLayer({
+        id: "markets-glow", type: "circle", source: "markets",
+        paint: {
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 8, 10, 18],
+          "circle-color": [
+            "match", ["get", "category"],
+            "flood", "#3B82F6",
+            "rain", "#06B6D4",
+            "storm", "#6B7280",
+            "fire", "#EF4444",
+            "catnat", "#F59E0B",
+            "#8B5CF6",
+          ],
+          "circle-opacity": 0.2,
+          "circle-blur": 0.5,
+        },
+      });
+
+      // Core dot
+      map.addLayer({
+        id: "markets-point", type: "circle", source: "markets",
+        paint: {
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 4, 10, 9],
+          "circle-color": [
+            "match", ["get", "category"],
+            "flood", "#2563EB",
+            "rain", "#0891B2",
+            "storm", "#4B5563",
+            "fire", "#DC2626",
+            "catnat", "#D97706",
+            "#7C3AED",
+          ],
+          "circle-opacity": 0.9,
+          "circle-stroke-color": "#FFFFFF",
+          "circle-stroke-width": 2,
+        },
+      });
+
+      // Labels with yes% + type
+      map.addLayer({
+        id: "markets-label", type: "symbol", source: "markets",
+        layout: {
+          "text-field": ["concat", ["get", "yesPercent"], "% ", ["get", "type"]],
+          "text-size": 10,
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+          "text-offset": [0, 1.8],
+          "text-allow-overlap": false,
+        },
+        paint: {
+          "text-color": [
+            "match", ["get", "category"],
+            "flood", "#1D4ED8",
+            "rain", "#0E7490",
+            "storm", "#374151",
+            "fire", "#991B1B",
+            "catnat", "#B45309",
+            "#6D28D9",
+          ],
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 1.5,
+        },
+        minzoom: 6,
+      });
+
       // ─── CLICK HANDLERS ───
       map.on("click", "zones-fill", (e) => {
         if (!e.features?.[0]) return;
         const zoneId = e.features[0].properties?.zoneId;
         const zone = zones.find((z) => z.zoneId === zoneId);
         if (zone) onZoneClick(zone);
+      });
+
+      // Market click popup
+      map.on("click", "markets-point", (e) => {
+        if (!e.features?.[0]) return;
+        const p = e.features[0].properties;
+        const coords = (e.features[0].geometry as GeoJSON.Point).coordinates as [number, number];
+        const catEmoji: Record<string, string> = { flood: "🌊", rain: "🌧", storm: "💨", fire: "🔥", catnat: "📋" };
+        const catLabel: Record<string, string> = { flood: "Inondation", rain: "Pluie", storm: "Tempete", fire: "Feu", catnat: "Cat Nat" };
+        new maplibregl.Popup({ offset: 12, maxWidth: "260px" })
+          .setLngLat(coords)
+          .setHTML(
+            `<div style="font-size:12px;line-height:1.5">
+              <div style="font-size:10px;color:#6B7280;margin-bottom:2px">${catEmoji[p?.category] || ""} ${catLabel[p?.category] || p?.category} — ${p?.type}</div>
+              <strong style="font-size:13px">${p?.title}</strong>
+              <div style="display:flex;gap:12px;margin-top:6px">
+                <div><span style="font-size:18px;font-weight:800;color:#10B981">${p?.yesPercent}%</span><br/><span style="font-size:10px;color:#6B7280">Oui</span></div>
+                <div><span style="font-size:18px;font-weight:800;color:#EF4444">${100 - Number(p?.yesPercent)}%</span><br/><span style="font-size:10px;color:#6B7280">Non</span></div>
+                <div><span style="font-size:14px;font-weight:700">${(Number(p?.volume) / 1000).toFixed(1)}k</span><br/><span style="font-size:10px;color:#6B7280">Vol.</span></div>
+              </div>
+              <div style="font-size:10px;color:#6B7280;margin-top:4px">${p?.daysLeft}j restants · ${p?.participants} participants</div>
+            </div>`
+          )
+          .addTo(map);
       });
 
       map.on("click", "fires-point", (e) => {
@@ -292,7 +386,7 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
       // Cursors
       const pointer = () => { map.getCanvas().style.cursor = "pointer"; };
       const reset = () => { map.getCanvas().style.cursor = ""; };
-      ["zones-fill", "fires-point", "cadastre-fill"].forEach((id) => {
+      ["zones-fill", "fires-point", "cadastre-fill", "markets-point"].forEach((id) => {
         if (map.getLayer(id)) {
           map.on("mouseenter", id, pointer);
           map.on("mouseleave", id, reset);
@@ -348,6 +442,7 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
       fires: ["fires-point", "fires-heat"],
       rivers: ["rivers-point", "rivers-label"],
       vigilance: ["vigilance-point", "vigilance-label"],
+      markets: ["markets-point", "markets-glow", "markets-label"],
     };
 
     for (const [key, ids] of Object.entries(vectorCfg)) {

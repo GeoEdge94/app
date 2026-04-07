@@ -15,7 +15,7 @@ interface MapState {
 
 export const useMapStore = create<MapState>((set) => ({
   selectedZone: null,
-  activeLayers: new Set<MapLayer>(["zones", "fires"]),
+  activeLayers: new Set<MapLayer>(["zones", "fires", "markets"]),
   sheetSnap: "half",
   darkMode: false,
   setSelectedZone: (zone) =>
