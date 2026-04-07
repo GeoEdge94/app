@@ -18,6 +18,7 @@ export interface RealBet {
   proof: string; // satellite/data layer that proves the outcome
   volume: number; // EUR (realistic mock)
   participants: number;
+  url?: string; // link to original bet on platform
   createdAt: string;
   department?: string;
   station?: string;

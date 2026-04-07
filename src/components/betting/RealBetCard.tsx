@@ -198,6 +198,19 @@ export function RealBetCard({ bet, onBet, compact = false }: RealBetCardProps) {
           </div>
         </div>
 
+        {/* Link to original bet */}
+        {bet.url && (
+          <a
+            href={bet.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-1.5 w-full py-2 mb-3 rounded-lg bg-primary/5 hover:bg-primary/10 text-primary text-xs font-medium transition-colors"
+          >
+            <ExternalLink className="h-3 w-3" />
+            Voir sur la plateforme
+          </a>
+        )}
+
         {/* Bet buttons */}
         {!isExpired && (
           <div className="flex gap-2">

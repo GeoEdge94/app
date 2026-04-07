@@ -156,7 +156,7 @@ export default function Home() {
                       volume: bet.volume, participants: Math.round(bet.volume / 50),
                       deadline: bet.deadline, oracleSource: bet.resolution_source, oracleCheck: bet.ai_analysis,
                       coordinates: bet.coordinates ?? { lat: 0, lon: 0 }, proof: bet.data_layer,
-                      createdAt: new Date().toISOString(),
+                      createdAt: new Date().toISOString(), url: bet.url,
                     }} />
                   ))}
                 </div>
