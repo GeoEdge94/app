@@ -29,6 +29,14 @@ import { RealBetCard } from "@/components/betting/RealBetCard";
 import { MARKETS } from "@/lib/markets-data";
 import { REAL_BETS } from "@/lib/real-bets";
 import { CURATED_BETS } from "@/lib/curated-bets";
+
+// Map curated categories to RealBet categories
+const CAT_MAP: Record<string, "fire" | "flood" | "rain" | "storm" | "earthquake"> = {
+  fire: "fire", flood: "flood", rain: "rain", storm: "storm", earthquake: "earthquake",
+  hurricane: "storm", tornado: "storm", volcano: "earthquake",
+  temperature: "rain", co2: "rain", snow: "rain",
+  air_quality: "rain", drought: "fire",
+};
 import { MOCK_BETS } from "@/lib/mock-data";
 import { WalletPanel } from "@/components/wallet/WalletPanel";
 
@@ -143,7 +151,7 @@ export default function Home() {
                 <div className="space-y-2">
                   {activeCurated.map((bet) => (
                     <RealBetCard key={bet.id} bet={{
-                      id: bet.id, title: bet.title, category: bet.category as "fire" | "flood" | "rain" | "storm" | "earthquake",
+                      id: bet.id, title: bet.title, category: CAT_MAP[bet.category] || "storm",
                       probability: bet.probability, yesPrice: bet.probability, noPrice: 1 - bet.probability,
                       volume: bet.volume, participants: Math.round(bet.volume / 50),
                       deadline: bet.deadline, oracleSource: bet.resolution_source, oracleCheck: bet.ai_analysis,
@@ -161,7 +169,7 @@ export default function Home() {
             <div className="space-y-2">
               {resolvedCurated.slice(0, 10).map((bet) => (
                 <RealBetCard key={bet.id} bet={{
-                  id: bet.id, title: bet.title, category: bet.category as "fire" | "flood" | "rain" | "storm" | "earthquake",
+                  id: bet.id, title: bet.title, category: CAT_MAP[bet.category] || "storm",
                   probability: bet.probability, yesPrice: bet.probability, noPrice: 1 - bet.probability,
                   volume: bet.volume, participants: Math.round(bet.volume / 50),
                   deadline: bet.deadline, oracleSource: bet.resolution_source, oracleCheck: bet.ai_analysis,
