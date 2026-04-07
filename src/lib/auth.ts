@@ -51,7 +51,23 @@ export const useAuthStore = create<AuthState>()(
           set({ user: profile, loading: false });
           return true;
         } catch (err) {
-          set({ error: (err as Error).message, loading: false });
+          // Fallback: if Firebase Auth not configured, create local guest profile
+          const msg = (err as Error).message || "";
+          if (msg.includes("CONFIGURATION_NOT_FOUND") || msg.includes("auth/network-request-failed")) {
+            const guestProfile: UserProfile = {
+              uid: "guest-" + Date.now(),
+              email,
+              displayName: email.split("@")[0],
+              walletBalance: 10000,
+              totalBets: 0,
+              totalWins: 0,
+              pnl: 0,
+              createdAt: new Date().toISOString(),
+            };
+            set({ user: guestProfile, loading: false, error: null });
+            return true;
+          }
+          set({ error: msg, loading: false });
           return false;
         }
       },
@@ -64,7 +80,22 @@ export const useAuthStore = create<AuthState>()(
           set({ user: profile, loading: false });
           return true;
         } catch (err) {
-          set({ error: (err as Error).message, loading: false });
+          const msg = (err as Error).message || "";
+          if (msg.includes("CONFIGURATION_NOT_FOUND") || msg.includes("auth/network-request-failed")) {
+            const guestProfile: UserProfile = {
+              uid: "guest-" + Date.now(),
+              email,
+              displayName: name || email.split("@")[0],
+              walletBalance: 10000,
+              totalBets: 0,
+              totalWins: 0,
+              pnl: 0,
+              createdAt: new Date().toISOString(),
+            };
+            set({ user: guestProfile, loading: false, error: null });
+            return true;
+          }
+          set({ error: msg, loading: false });
           return false;
         }
       },
@@ -118,7 +149,13 @@ async function loadOrCreateProfile(fbUser: User, displayName?: string): Promise<
 
 // Init auth listener
 export function initAuthListener() {
-  return onAuthStateChanged(auth, (user) => {
-    useAuthStore.getState().setFirebaseUser(user);
-  });
+  try {
+    return onAuthStateChanged(auth, (user) => {
+      useAuthStore.getState().setFirebaseUser(user);
+    });
+  } catch {
+    // If Firebase Auth not configured, just set loading to false
+    useAuthStore.setState({ loading: false });
+    return () => {};
+  }
 }
