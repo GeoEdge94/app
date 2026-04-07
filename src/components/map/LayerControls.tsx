@@ -22,7 +22,7 @@ export function LayerControls() {
   const activeCount = activeLayers.size;
 
   return (
-    <div className="absolute top-3 left-3 z-20">
+    <div className="absolute top-12 left-3 z-20">
       {/* Collapsed: single button */}
       {!open && (
         <button
