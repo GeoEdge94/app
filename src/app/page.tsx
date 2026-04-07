@@ -11,6 +11,9 @@ import { ZoneDetail } from "@/components/betting/ZoneDetail";
 import { BetSlip } from "@/components/betting/BetSlip";
 import { PortfolioView } from "@/components/betting/PortfolioView";
 import { BottomSheet } from "@/components/layout/BottomSheet";
+import { LoginForm } from "@/components/auth/LoginForm";
+import { AccountPanel } from "@/components/auth/AccountPanel";
+import { useAuthStore, initAuthListener } from "@/lib/auth";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Flame, TrendingUp, Users, Loader2, Database, MapPin } from "lucide-react";
@@ -33,10 +36,13 @@ const MapView = dynamic(
 
 export default function Home() {
   const { selectedZone, setSelectedZone, deselectZone, sheetSnap, setSheetSnap, initDarkMode, darkMode } = useMapStore();
+  const { user, loading: authLoading } = useAuthStore();
 
-  // Init dark mode from localStorage or system preference
+  // Init dark mode + auth listener
   useEffect(() => { initDarkMode(); }, [initDarkMode]);
-  const [activeTab, setActiveTab] = useState<"map" | "portfolio" | "simulator" | "telegram">("map");
+  useEffect(() => { const unsub = initAuthListener(); return unsub; }, []);
+
+  const [activeTab, setActiveTab] = useState<"map" | "portfolio" | "simulator" | "account">("map");
   const [panelView, setPanelView] = useState<"list" | "detail" | "bet">("list");
 
   const { zones: firestoreZones, loading: zonesLoading } = useZones();
@@ -85,7 +91,16 @@ export default function Home() {
     }
   }, [panelView, deselectZone, setSheetSnap]);
 
+  // Auth gate — show login if not authenticated
+  if (!authLoading && !user) {
+    return <LoginForm />;
+  }
+
   function renderPanel() {
+    if (activeTab === "account") {
+      return <AccountPanel />;
+    }
+
     if (activeTab === "portfolio") {
       return (
         <ScrollArea className="flex-1">

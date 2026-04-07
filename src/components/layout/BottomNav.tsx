@@ -1,17 +1,16 @@
 "use client";
 
-import { Map, BarChart3, Calculator, Send } from "lucide-react";
+import { Map, BarChart3, Calculator, User } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
 
 const tabs = [
   { id: "map", label: "Carte", icon: Map },
   { id: "portfolio", label: "Portfolio", icon: BarChart3 },
   { id: "simulator", label: "Simuler", icon: Calculator },
-  { id: "telegram", label: "Telegram", icon: Send },
+  { id: "account", label: "Compte", icon: User },
 ] as const;
 
-type Tab = (typeof tabs)[number]["id"];
+export type Tab = (typeof tabs)[number]["id"];
 
 export function BottomNav({ active, onTabChange }: { active: Tab; onTabChange: (t: Tab) => void }) {
   return (
