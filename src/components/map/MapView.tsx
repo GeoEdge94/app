@@ -7,6 +7,7 @@ import { useMapStore } from "@/stores/useMapStore";
 import { MAP_STYLES, TILE_SOURCES, FRANCE_CENTER, DEFAULT_ZOOM } from "@/lib/map-styles";
 import { RISK_COLORS } from "@/lib/risk-colors";
 import { marketsToGeoJson } from "@/lib/markets-geojson";
+import { marketZonesToGeoJson } from "@/lib/market-zones-geo";
 import type { BettingZone } from "@/types";
 
 interface MapViewProps {
@@ -235,7 +236,70 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
         });
       }
 
-      // ─── 9. MARKETS (prediction market pins) ───
+      // ─── 9a. MARKET ZONES (thematic polygons) ───
+      const mzGeoJson = marketZonesToGeoJson();
+      map.addSource("market-zones", { type: "geojson", data: mzGeoJson });
+
+      map.addLayer({
+        id: "market-zones-fill", type: "fill", source: "market-zones",
+        paint: {
+          "fill-color": [
+            "match", ["get", "category"],
+            "flood", "#3B82F6",
+            "rain", "#06B6D4",
+            "storm", "#9CA3AF",
+            "fire", "#EF4444",
+            "catnat", "#F59E0B",
+            "#8B5CF6",
+          ],
+          "fill-opacity": 0.12,
+        },
+      });
+
+      map.addLayer({
+        id: "market-zones-border", type: "line", source: "market-zones",
+        paint: {
+          "line-color": [
+            "match", ["get", "category"],
+            "flood", "#2563EB",
+            "rain", "#0891B2",
+            "storm", "#6B7280",
+            "fire", "#DC2626",
+            "catnat", "#D97706",
+            "#7C3AED",
+          ],
+          "line-width": 2,
+          "line-opacity": 0.6,
+          "line-dasharray": [6, 3],
+        },
+      });
+
+      map.addLayer({
+        id: "market-zones-label", type: "symbol", source: "market-zones",
+        layout: {
+          "text-field": ["get", "label"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 6, 10, 10, 13],
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+          "text-anchor": "center",
+          "text-allow-overlap": false,
+        },
+        paint: {
+          "text-color": [
+            "match", ["get", "category"],
+            "flood", "#1D4ED8",
+            "rain", "#0E7490",
+            "storm", "#4B5563",
+            "fire", "#991B1B",
+            "catnat", "#B45309",
+            "#6D28D9",
+          ],
+          "text-halo-color": "rgba(255,255,255,0.9)",
+          "text-halo-width": 2,
+        },
+        minzoom: 7,
+      });
+
+      // ─── 9b. MARKETS (prediction market pins) ───
       const marketsGeoJson = marketsToGeoJson();
       map.addSource("markets", { type: "geojson", data: marketsGeoJson });
 
@@ -442,7 +506,7 @@ export function MapView({ zones, firesGeoJson, cadastreGeoJson, riversGeoJson, v
       fires: ["fires-point", "fires-heat"],
       rivers: ["rivers-point", "rivers-label"],
       vigilance: ["vigilance-point", "vigilance-label"],
-      markets: ["markets-point", "markets-glow", "markets-label"],
+      markets: ["markets-point", "markets-glow", "markets-label", "market-zones-fill", "market-zones-border", "market-zones-label"],
     };
 
     for (const [key, ids] of Object.entries(vectorCfg)) {

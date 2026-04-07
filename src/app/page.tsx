@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/Header";
 import { BottomNav } from "@/components/layout/BottomNav";
 import { LayerControls } from "@/components/map/LayerControls";
+import { BetBanner } from "@/components/map/BetBanner";
 import { ZoneCard } from "@/components/betting/ZoneCard";
 import { ZoneDetail } from "@/components/betting/ZoneDetail";
 import { BetSlip } from "@/components/betting/BetSlip";
@@ -165,6 +166,7 @@ export default function Home() {
             <MapView zones={zones} firesGeoJson={fires} cadastreGeoJson={cadastre} riversGeoJson={rivers} vigilanceGeoJson={vigilance} onZoneClick={handleZoneSelect} onDeselect={handleDeselect} />
           )}
           {!zonesLoading && <LayerControls />}
+          {!zonesLoading && <BetBanner />}
 
           {/* Stats bar */}
           <div className="absolute left-0 right-0 flex items-center justify-center gap-2.5 px-3 py-1.5 bg-background/80 backdrop-blur-md border-t border-border/50 z-10 bottom-14 md:bottom-0 md:right-[380px]">
