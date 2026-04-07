@@ -3,21 +3,27 @@
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { ZONE_GEOMETRIES } from "@/lib/zone-geometries";
 import type { BettingZone } from "@/types";
 
 function parseFirestoreZone(id: string, data: Record<string, unknown>): BettingZone {
-  const geometry = data.geometry as { type: string; coordinates: string } | undefined;
-  let parsedCoords: number[][][] = [];
-  if (geometry?.coordinates) {
-    try {
-      parsedCoords = JSON.parse(geometry.coordinates as string);
-    } catch {
-      parsedCoords = [];
+  // Use real terrain-contour geometry instead of Firestore rectangles
+  const realGeometry = ZONE_GEOMETRIES[id];
+
+  // Fallback to Firestore geometry if not in local file
+  let geometry: GeoJSON.Polygon;
+  if (realGeometry) {
+    geometry = realGeometry;
+  } else {
+    const fsGeom = data.geometry as { type: string; coordinates: string } | undefined;
+    let parsedCoords: number[][][] = [];
+    if (fsGeom?.coordinates) {
+      try { parsedCoords = JSON.parse(fsGeom.coordinates as string); } catch { /* */ }
     }
+    geometry = { type: "Polygon", coordinates: parsedCoords };
   }
 
   const meteo = data.meteo as Record<string, number> | undefined;
-  const bbox = data.bbox as Record<string, number> | undefined;
 
   return {
     zoneId: id,
@@ -43,10 +49,7 @@ function parseFirestoreZone(id: string, data: Record<string, unknown>): BettingZ
       precipitation: meteo?.precipitation || 0,
     },
     fwiIndex: (data.fwiIndex as number) || 0,
-    geometry: {
-      type: "Polygon",
-      coordinates: parsedCoords,
-    },
+    geometry,
   };
 }
 
@@ -62,7 +65,6 @@ export function useZones() {
         const parsed = snapshot.docs.map((doc) =>
           parseFirestoreZone(doc.id, doc.data() as Record<string, unknown>)
         );
-        // Sort by risk: critical first
         const order = { critical: 0, high: 1, moderate: 2, low: 3 };
         parsed.sort((a, b) => order[a.riskLevel] - order[b.riskLevel]);
         setZones(parsed);
